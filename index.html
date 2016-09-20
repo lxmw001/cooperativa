@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Coopartamos Ltda</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+      <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Simple Line Icons -->
+    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+      <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+
+    <!--Plugin para mostrar el dropdow cuando se-->
+    <script src="lib/jquery-3.1.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="lib/bootstrap-dropdown-on-hover-plugin.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="coop">
+    <header role="banner" id="fh5co-header">
+      <div class="fluid-container">
+      <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <!-- Mobile Toggle Menu Button -->
+          <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+          <a class="navbar-brand" ui-sref="home">Coopartamos <small>Ltda</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a ui-sref="home"><span>Home</span></a></li>
+            <!-- Para submenos descomentar -->
+            <!-- <li class="dropdown">
+              <a ui-sref="ahorros" class="dropdown-toggle" data-hover="dropdown" data-delay="0" data-close-others="false">
+                <span>Cuentas</span>
+                 <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="#">Ahorro a la Vista</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="#">Ahorros Futuros</a></li>
+                <li><a tabindex="-1" href="#">Ahorro Estudiantil</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="#">Servicio 4</a></li>
+              </ul>
+            </li> -->
+            <li><a ui-sref="ahorros" class="dropbtn"><span>Cuentas</span></a></li>
+            <li><a ui-sref="plazo_fijo" class="dropbtn"><span>Depositos</span></a></li>
+            <li><a ui-sref="creditos" class="dropbtn"><span>Creditos</span></a></li>
+            <li><a ui-sref="micro_creditos" class="dropbtn"><span>Micro Creditos</span></a></li>
+            <!-- <li><a href="#" data-nav-section="pricing"><span>Pricing</span></a></li>
+            <li><a href="#" data-nav-section="team"><span>Team</span></a></li>
+            <li><a href="#" data-nav-section="blog"><span>Blog</span></a></li>
+            <li><a href="#" data-nav-section="faq"><span>FAQ</span></a></li> -->
+            <!-- <li class="call-to-action"><a class="sign-up" href="#"><span>Sign Up</span></a></li>
+            <li class="call-to-action"><a class="log-in" href="#"><span>Login</span></a></li> -->
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!--   <div class="row">
+        <div class="col-sm-3 col-xs-12">
+          <img class="img-responsive" src="img/logo.png">
+        </div>
+        <div class="col-sm-3 col-xs-12 menu">
+          Abrir Cuenta
+        </div>
+        <div class="col-sm-3 col-xs-12 menu">
+          Creditos
+        </div>
+        <div class="col-sm-3 col-xs-12 menu">
+          Servicios
+        </div>
+      </div>
+        <h1>Encabezado de la pagina</h1> -->
+    </header>
+    <section id="fh5co-services" data-section="services" ui-view></section>
+    <footer class="panel-footer">
+        <div>Pie de pagina</div>
+    </footer>
+
+  </body>
+</html>
