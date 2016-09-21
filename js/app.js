@@ -10,36 +10,31 @@ angular.module('coop',['ui.router'])
           templateUrl: 'templates/home.html',
           controller: 'crtlHome'
       })
-     .state('servicios', {
-          url: '/servicios',
-          templateUrl: 'templates/servicios.html',
-          controller: 'crtlServicios'
-      })
 
      /*Rutas para Cuentas*/
      .state('ahorros', {
           url: '/ahorros',
           templateUrl: 'templates/cuentas/ahorros.html',
-          controller: ''
+          controller: 'crtlCuentas'
       })
 
      /*Rutas para Depositos*/
      .state('plazo_fijo', {
           url: '/plazo_fijo',
           templateUrl: 'templates/depositos/plazo_fijo.html',
-          controller: ''
+          controller: 'crtlDepositos'
       })
 
      .state('creditos', {
           url: '/creditos',
           templateUrl: 'templates/creditos/creditos.html',
-          controller: ''
+          controller: 'crtlCreditos'
       })
 
      .state('micro_creditos', {
           url: '/micro_creditos',
           templateUrl: 'templates/creditos/micro_creditos.html',
-          controller: ''
+          controller: 'crtlMicro'
       })
 
 
@@ -47,14 +42,24 @@ angular.module('coop',['ui.router'])
 
 })
 
-.controller('crtlHome', function($scope) {
-  console.log('Controller Home');
+.controller('crtlHome', function($scope, $rootScope) {
+  $rootScope.state = 'home';
 })
 
-.controller('crtlServicios', function($scope) {
-  console.log('Controller Servicios');
+.controller('crtlCuentas', function($scope, $rootScope) {
+  $rootScope.state = 'cuentas';
 })
 
-.controller('crtlContactos', function($scope) {
-  console.log('Controller Contactos');
-});
+.controller('crtlDepositos', function($scope, $rootScope) {
+  $rootScope.state = 'depositos';
+})
+
+.controller('crtlCreditos', function($scope, $rootScope) {
+  $rootScope.state = 'creditos';
+})
+
+.controller('crtlMicro', function($scope, $rootScope) {
+  $rootScope.state = 'micro';
+})
+
+;
