@@ -1,4 +1,4 @@
-angular.module('coop',['ui.router'])
+angular.module('coop',['ui.router', 'ngMaterial'])
 .run(function($state) {
   console.log('hola mundo');
 })
