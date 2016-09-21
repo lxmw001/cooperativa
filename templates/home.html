@@ -1,27 +1,44 @@
-<div id="captioned-gallery">
-  <figure class="slider">
-    <figure>
-      <img src="img/slider1.png" alt>
-      <figcaption>Acérquese a una de nuestras Oficinas y canjee sin costo Ver más →</figcaption>
-    </figure>
-    <figure>
-      <img src="img/slider2.jpg" alt>
-      <figcaption>Conozca nuestra Cuenta de Ahorro propósito Ver más →</figcaption>
-    </figure>
-    <figure>
-      <img src="img/slider3.jpg" alt>
-      <figcaption>Crédito destinado para consolidar o ampliar su negocio o empresa Ver más →</figcaption>
-    </figure>
-    <figure>
-      <img src="img/slider4.jpg" alt>
-      <figcaption>Conozca nuestra Cuenta de Ahorro propósito Ver más →</figcaption>
-    </figure>
-    <figure>
-      <img src="img/slider1.png" alt>
-      <figcaption>Acérquese a una de nuestras Oficinas y canjee sin costo Ver más →</figcaption>
-    </figure>
-  </figure>
+<script type="text/javascript">
+  $(document).ready(function(){
+      $('.slider').slider({
+        indicators: true,
+        interval: 3000
+      });
+    });       
+</script>
+<div class="slider">
+  <ul class="slides">
+    <li>
+      <img src="img/slider1.png"> <!-- random image -->
+      <div class="caption center-align">
+        <h3>This is our big Tagline!</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="img/slider2.jpg"> <!-- random image -->
+      <div class="caption left-align">
+        <h3>Left Aligned Caption</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="img/slider3.jpg"> <!-- random image -->
+      <div class="caption right-align">
+        <h3>Right Aligned Caption</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="img/slider4.jpg"> <!-- random image -->
+      <div class="caption center-align">
+        <h3>This is our big Tagline!</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+  </ul>
 </div>
+      
 <div class="row">
   <div class="col">
     <div class="card">
@@ -29,12 +46,13 @@
         <img src="img/slider2.jpg">
         <span class="card-title">Card Title</span>
       </div>
-      <div class="card-content">
-        <p>I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively.</p>
-      </div>
-      <div class="card-action">
-        <a href="#">This is a link</a>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-image">
+        <img src="img/slider2.jpg">
+        <span class="card-title">Card Title</span>
       </div>
     </div>
   </div>
@@ -44,13 +62,6 @@
         <img src="img/slider2.jpg">
         <span class="card-title">Card Title</span>
       </div>
-      <div class="card-content">
-        <p>I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively.</p>
-      </div>
-      <div class="card-action">
-        <a href="#">This is a link</a>
-      </div>
     </div>
   </div>
   <div class="col">
@@ -58,28 +69,6 @@
       <div class="card-image">
         <img src="img/slider2.jpg">
         <span class="card-title">Card Title</span>
-      </div>
-      <div class="card-content">
-        <p>I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively.</p>
-      </div>
-      <div class="card-action">
-        <a href="#">This is a link</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-image">
-        <img src="img/slider2.jpg">
-        <span class="card-title">Card Title</span>
-      </div>
-      <div class="card-content">
-        <p>I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively.</p>
-      </div>
-      <div class="card-action">
-        <a href="#">This is a link</a>
       </div>
     </div>
   </div>
