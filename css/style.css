@@ -1569,6 +1569,11 @@ figure.slider figure figcaption {
   font-size: 2rem; padding: .6rem;
 }
 
+/*estilos navbar*/
+#fh5co-header .navbar-default {
+    background: #00897b !important;
+}
+
 /*Estilos contenido*/
 .content {
   padding: 20px;
@@ -1578,4 +1583,16 @@ figure.slider figure figcaption {
   // color: #323432;
   text-shadow: 2px 2px 2px #CCCCCC;
   color: #7c795d; font-family: 'Trocchi', serif; font-weight: normal; line-height: 48px; margin: 0;
+}
+
+/*Estilo card title*/
+span.card-title {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+/*estilos para el body*/
+body {
+  height: auto !important;
+  // background-color: rgb(0, 225, 255);
 }
