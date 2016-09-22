@@ -37,6 +37,18 @@ angular.module('coop',['ui.router', 'ngMaterial'])
           controller: 'crtlMicro'
       })
 
+     .state('conocenos', {
+          url: '/conocenos',
+          templateUrl: 'templates/conocenos.html',
+          controller: 'crtlConocenos'
+      })
+
+     .state('contactanos', {
+          url: '/contactanos',
+          templateUrl: 'templates/contactanos.html',
+          controller: 'crtlContactanos'
+      })
+
 
   $urlRouterProvider.otherwise('/');
 
@@ -62,4 +74,11 @@ angular.module('coop',['ui.router', 'ngMaterial'])
   $rootScope.state = 'micro';
 })
 
+.controller('crtlConocenos', function($scope, $rootScope) {
+  $rootScope.state = 'conocenos';
+})
+
+.controller('crtlContactanos', function($scope, $rootScope) {
+  $rootScope.state = 'contactanos';
+})
 ;

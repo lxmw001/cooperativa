@@ -10,12 +10,12 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="favicon.ico">
 
-    
+
     <!-- Simple Line Icons -->
     <link rel="stylesheet" href="css/simple-line-icons.css">
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="css/bootstrap.css">
-    
+
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -58,7 +58,7 @@
       $( document ).ready(function(){
         $(".button-collapse").sideNav();
       })
-      
+
     </script>
   </head>
   <body ng-app="coop">
@@ -67,20 +67,24 @@
         <nav>
           <div class="nav-wrapper teal lighten-2">
             <a href="#!" class="brand-logo"><img src="img/logo.png" style="width:100px"> Coop</a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="small material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-              <li ng-class="{active: state=='home'}"><a ui-sref="home"><span>Home</span></a></li>  
+              <li ng-class="{active: state=='home'}"><a ui-sref="home"><span>Home</span></a></li>
               <li ng-class="{active: state=='cuentas'}"><a ui-sref="ahorros"><span>Cuentas</span></a></li>
               <li ng-class="{active: state=='depositos'}"><a ui-sref="plazo_fijo" class="dropbtn"><span>Depositos</span></a></li>
               <li ng-class="{active: state=='creditos'}"><a ui-sref="creditos" class="dropbtn"><span>Creditos</span></a></li>
               <li ng-class="{active: state=='micro'}"><a ui-sref="micro_creditos" class="dropbtn"><span>Micro Creditos</span></a></li>
+              <li ng-class="{active: state=='conocenos'}"><a ui-sref="conocenos" class="dropbtn"><span>Conocenos</span></a></li>
+              <li ng-class="{active: state=='contactanos'}"><a ui-sref="contactanos" class="dropbtn"><span>Contáctanos</span></a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-              <li ng-class="{active: state=='home'}"><a ui-sref="home"><span>Home</span></a></li>  
+              <li ng-class="{active: state=='home'}"><a ui-sref="home"><span>Home</span></a></li>
               <li ng-class="{active: state=='cuentas'}"><a ui-sref="ahorros"><span>Cuentas</span></a></li>
               <li ng-class="{active: state=='depositos'}"><a ui-sref="plazo_fijo" class="dropbtn"><span>Depositos</span></a></li>
               <li ng-class="{active: state=='creditos'}"><a ui-sref="creditos" class="dropbtn"><span>Creditos</span></a></li>
               <li ng-class="{active: state=='micro'}"><a ui-sref="micro_creditos" class="dropbtn"><span>Micro Creditos</span></a></li>
+              <li ng-class="{active: state=='conocenos'}"><a ui-sref="conocenos" class="dropbtn"><span>Conocenos</span></a></li>
+              <li ng-class="{active: state=='contactanos'}"><a ui-sref="contactanos" class="dropbtn"><span>Contáctanos</span></a></li>
             </ul>
           </div>
         </nav>
