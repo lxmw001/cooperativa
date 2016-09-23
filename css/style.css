@@ -3,6 +3,15 @@
   padding: 20px;
 }
 
-.caption {
+.caption, .card-title {
     background-color: rgba(0, 0, 0, 0.53);
+}
+
+.card-title {
+  width: 100%;
+}
+
+.owl-carousel .card {
+  margin-right: 5px;
+  margin-left: 5px;
 }
