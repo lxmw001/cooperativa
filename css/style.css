@@ -1,20 +1,8 @@
-Estilos contenido*/
+
 .content {
   padding: 20px;
 }
 
-/*Estilo card title*/
-
-
-/*estilos para el FOOTER*/
-/*
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+.caption {
+    background-color: rgba(0, 0, 0, 0.53);
 }
-
-main {
-  flex: 1 0 auto;
-}
-*/
