@@ -3,7 +3,7 @@
   padding: 20px;
 }
 
-.caption, .card-title {
+.caption, .owl-carousel .card-title {
     background-color: rgba(0, 0, 0, 0.53);
 }
 
