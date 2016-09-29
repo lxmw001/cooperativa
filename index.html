@@ -34,6 +34,11 @@
     <!-- Angular Libraries -->
     <script src="lib/angularjs/angular-1.5.5.min.js"></script>
     <script src="lib/angularjs/angular-ui-router-0.3.1.min.js"></script>
+
+    <!-- firebase  scripts-->
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+
     <script src="js/contador.js"></script>
     <script src="js/app.js"></script>
 
@@ -42,8 +47,8 @@
         $(".button-collapse").sideNav();
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
         $('.modal-trigger').leanModal({
-          ready: function() { alert('Ready'); }, // Callback for Modal open
-          complete: function() { alert('Closed'); } // Callback for Modal close
+          //ready: function() { alert('Ready'); }, // Callback for Modal open
+          //complete: function() { alert('Closed'); } // Callback for Modal close
         });
       })
     </script>
@@ -92,14 +97,22 @@
               <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
               <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
               <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-            </ul>
+            </ul>          
           </div>
           <div class="col l3 m12 s12">
-            <div class="card blue-grey darken-1">
+            <div class="card blue-grey darken-1" ng-controller="crtlContador">
               <div class="card-content white-text">
-                <span class="card-title">Contador de Visitas</span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+                <div class="row">
+                  <div class="col"><span class="card-title">Contador de Visitas</span></div>
+                </div>
+                <div class="row">
+                  <div class="col m8">Hoy</div>
+                  <div class="col m4 right-align">12</div>
+                  <div class="col m8">Este mes</div>
+                  <div class="col m4 right-align">122</div>
+                  <div class="col m8">Total</div>
+                  <div class="col m4 right-align">2112</div>
+                </div>
               </div>
             </div>
             <!-- Modal Trigger -->
@@ -114,8 +127,9 @@
         </div>
       </div>
     </footer>
+
     <!-- Modal Structure -->
-    <div id="modal1" class="modal">
+    <div id="modal1" class="modal" ng-controller="crtlSuscripcion">
       <div class="modal-content">
         <h4>Suscribirse</h4>
         <div class="row">
@@ -153,8 +167,11 @@
       </div>
       <div class="modal-footer">
         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
-        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons right">send</i>Suscribirse</a>
+        <a href="#!" class=" modal-action waves-effect waves-green btn-flat" ng-click="suscribir()"><i class="material-icons right">send</i>Suscribirse</a>
       </div>
     </div>
+
+
+
   </body>
 </html>
