@@ -23,6 +23,12 @@
         lazyFollow : true,
         lazyEffect : "fade",
       });
+
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      $('.modal-trigger').leanModal({
+        ready: function() { alert('Ready'); }, // Callback for Modal open
+        complete: function() { alert('Closed'); } // Callback for Modal close
+      });
     });
 
 </script>
@@ -61,7 +67,7 @@
       </ul>
     </div>
   </div>
-  <div class="col s12 l9">
+  <div class="col s12 l12">
     <div class="owl-carousel">
       <div class="card">
         <div class="card-image">
@@ -104,15 +110,6 @@
           <img src="img/service7.jpg">
           <span class="card-title">Servicio 7</span>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="col s12 l3">
-    <div class="card blue-grey darken-1">
-      <div class="card-content white-text">
-        <span class="card-title">Contador de Visitas</span>
-        <p>I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively.</p>
       </div>
     </div>
   </div>

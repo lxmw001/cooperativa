@@ -40,6 +40,11 @@
     <script type="text/javascript">
       $( document ).ready(function(){
         $(".button-collapse").sideNav();
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal({
+          ready: function() { alert('Ready'); }, // Callback for Modal open
+          complete: function() { alert('Closed'); } // Callback for Modal close
+        });
       })
     </script>
   </head>
@@ -74,13 +79,13 @@
     </header>
     <section ui-view></section>
     <footer class="page-footer deep-purple lighten-3">
-      <div class="container">
+      <div class="content">
         <div class="row">
-          <div class="col l6 s12">
+          <div class="col l6 m8 s12">
             <h5 class="white-text">Footer Content</h5>
             <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
           </div>
-          <div class="col l4 offset-l2 s12">
+          <div class="col l3 m4 s12">
             <h5 class="white-text">Links</h5>
             <ul>
               <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
@@ -88,6 +93,17 @@
               <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
               <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
             </ul>
+          </div>
+          <div class="col l3 m12 s12">
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <span class="card-title">Contador de Visitas</span>
+                <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+            </div>
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Suscribirse</a>         
           </div>
         </div>
       </div>
@@ -98,6 +114,47 @@
         </div>
       </div>
     </footer>
-
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Suscribirse</h4>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col m6 s12">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">Nombres</label>
+              </div>
+              <div class="input-field col m6 s12">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Apellidos</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="phone" type="number" class="validate">
+                <label for="phone">Telefono</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Comentario</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons right">send</i>Suscribirse</a>
+      </div>
+    </div>
   </body>
 </html>
