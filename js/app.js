@@ -82,7 +82,22 @@ angular.module('coop',['ui.router', 'firebase'])
   $rootScope.state = 'contactanos';
 })
 
-.controller('crtlSuscripcion', function($scope, $firebase) {
+.controller('crtlContador', function($scope, $firebase) {
+
+  contador = function(opcion) {
+    $.ajax({
+       url: "php/visitas.php",
+       type: "post",
+       data: "opcion="+opcion,
+       success: function(data){
+          var response = data.split(" ");
+          $scope.hoy = response[2];
+          $scope.mes = response[3];
+          $scope.total = response[4];
+       }
+    });
+  }
+
   guardar_cookie = function() {
     var date = new Date();
     var minutes = 240;
@@ -90,7 +105,7 @@ angular.module('coop',['ui.router', 'firebase'])
     $.cookie("contador", "visitas", { expires: date });
   }
 
-  verificar_cookie = function() {
+  $scope.verificar_cookie = function() {
     var visitado = $.cookie("contador");
     if(visitado) {
       contador(0);
@@ -105,16 +120,21 @@ angular.module('coop',['ui.router', 'firebase'])
 
   var clientFB;
 
-  $scope.nombre = 'luis';
-  $scope.apellido = 'gonzalez';
-  $scope.email = 'lgonzalez';
-  $scope.telefono = '023423';
-  $scope.comentario = 'asdfads';
+  // $scope.nombre = 'luis';
+  // $scope.apellido = 'gonzalez';
+  // $scope.email = 'lgonzalez';
+  // $scope.telefono = '023423';
+  // $scope.comentario = 'asdfads';
 
   $scope.suscribir = function() {
-    var path = 'https://coopartamos-4616a.firebaseio.com/suscriptores/' + $scope.email;
-    clientFB = new Firebase(path);
+    // var path = 'https://coopartamos-4616a.firebaseio.com/suscriptores/' + encodeMail($scope.email);
+    // clientFB = new Firebase(path);
     console.log('suscribir');
+    if( !$scope.nombre && !$scope.apellido &&
+     !$scope.email && !$scope.telefono && !$scope.comentario) {
+      mostrarMensaje('Llenar todos los campos');
+      return;
+    }
     var suscriptor = {
       nombre : $scope.nombre,
       apellido : $scope.apellido,
@@ -125,9 +145,20 @@ angular.module('coop',['ui.router', 'firebase'])
 
     verificarSuscriptor(function() {
       clientFB.update(suscriptor);
-      limpiarDatosSuscripcion();
       mostrarMensaje('Suscrito correctamente');
+      limpiarDatosSuscripcion();
+      obtenerSuscriptores();
     });
+  }
+
+  encodeMail = function(email) {
+    var encoded = email.split('.').join('@punto@');
+    console.log(encoded);
+    return encoded;
+  }
+
+  decodeMail = function(email) {
+    return email.replace('@punto@', '.');
   }
 
   verificarSuscriptor = function(callback) {
@@ -150,11 +181,13 @@ angular.module('coop',['ui.router', 'firebase'])
 
   limpiarDatosSuscripcion = function() {
     console.log('limpiando datos');
-    $scope.nombre = '';
-    $scope.apellido = '';
-    $scope.email = '';
-    $scope.telefono = '';
-    $scope.comentario = '';
+    $scope.$apply(function() {
+      $scope.nombre = '';
+      $scope.apellido = '';
+      $scope.email = '';
+      $scope.telefono = '';
+      $scope.comentario = '';
+    });
   }
 
   mostrarMensaje = function(mensaje) {
@@ -162,18 +195,46 @@ angular.module('coop',['ui.router', 'firebase'])
     Materialize.toast(mensaje, 3000, 'rounded') // 'rounded' is the class I'm applying to the toast
   }
 
-  obtenerSuscriptores = function(callback) {
+  obtenerSuscriptores = function() {
     var path = 'https://coopartamos-4616a.firebaseio.com/suscriptores';
     clientFB = new Firebase(path);
     clientFB.once('value', function(snapshot) {
       if (snapshot.val()) {
+        var suscriptores = [];
         // enviar por correo estos datos o lo q el cliente quiere hacer
-        callback(snapshot.val())
+        console.log(snapshot.val());
+        for (suscriptor in  snapshot.val()) {
+          console.log(suscriptor);
+          console.log(snapshot.val()[suscriptor]);
+          suscriptores.push(snapshot.val()[suscriptor]);
+        }
+
+        enviarMail(suscriptores);
       }
     }, function (err) {
       console.log(err);
     });
   }
-})
 
-;
+  enviarMail = function(suscriptores) {
+    suscriptores = JSON.stringify(suscriptores);
+    console.log(suscriptores);
+    var paramentros = {
+      enviarMail: true,
+      datos: suscriptores
+    }
+    $.ajax({
+       url: "php/visitas.php",
+       type: "post",
+       data: paramentros,
+       success: function(data){
+         if(data == '1') {
+           console.log('ok');
+           // $('#myModal').modal('hide');
+         } else {
+          console.log('error');
+         }
+       }
+    });
+  }
+});

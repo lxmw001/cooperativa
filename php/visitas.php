@@ -8,6 +8,10 @@ if(isset($_POST['suscripcion'])) {
  echo guardarSuscriptor();
 }
 
+if(isset($_POST['enviarMail'])) {
+ echo enviarMail($_POST['datos']);
+}
+
 function contador_visitas($sumar) {
  	$archivo = "contador.txt";
  	$info = array();
@@ -141,6 +145,38 @@ function enviarSuscriptoresCorreo ($conn) {
 	}else{
 //	  echo "Mail Not Sent";
 	}
+}
+
+function enviarMail($suscriptores) {
+  $suscriptores = json_decode($suscriptores);
+  $titulo = "Suscriptores de Coopartamos";
+  $headers = "MIME-Version: 1.0\r\n";
+  $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+  $bodyEmail = "<h3>Lista de usuarios Suscritos</h3>";
+  $bodyEmail .= "<table border=1 cellspacing=0 cellpadding=2 bordercolor='666633'>";
+  $bodyEmail .= "<tr>";
+  $bodyEmail .= "<th>Nombre</th>";
+  $bodyEmail .= "<th>Apellido</th>";
+  $bodyEmail .= "<th>Correo</th>";
+  $bodyEmail .= "<th>Telefono</th>";
+  $bodyEmail .= "<th>Comentario</th>";
+  $bodyEmail .= "</tr>";
+  foreach($suscriptores as $suscrip){
+    $bodyEmail .=  "<tr>";
+    $bodyEmail .=  "<td>$suscrip->nombre</td>";
+    $bodyEmail .=  "<td>$suscrip->apellido</td>";
+    $bodyEmail .=  "<td>$suscrip->email</td>";
+    $bodyEmail .=  "<td>$suscrip->telefono</td>";
+    $bodyEmail .=  "<td>$suscrip->comentario</td>";
+    $bodyEmail .=  "</tr>";
+  }
+  $bodyEmail .=  "</table>";
+  $emailRecipient = "lx.mw001@gmail.com, gloveapp@hotmail.com";
+  if(@mail($emailRecipient, $titulo, $bodyEmail, $headers)) {
+     return 1;
+  } else {
+    return 0;
+  }
 }
 
 ?>
