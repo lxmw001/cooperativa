@@ -127,8 +127,8 @@ angular.module('coop',['ui.router', 'firebase'])
   // $scope.comentario = 'asdfads';
 
   $scope.suscribir = function() {
-    // var path = 'https://coopartamos-4616a.firebaseio.com/suscriptores/' + encodeMail($scope.email);
-    // clientFB = new Firebase(path);
+    var path = 'https://coopartamos-4616a.firebaseio.com/suscriptores/' + encodeMail($scope.email);
+    clientFB = new Firebase(path);
     console.log('suscribir');
     if( !$scope.nombre && !$scope.apellido &&
      !$scope.email && !$scope.telefono && !$scope.comentario) {
