@@ -1,6 +1,6 @@
 angular.module('coop',['ui.router', 'firebase'])
 .run(function($state) {
-  console.log('hola mundo');
+
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -49,13 +49,23 @@ angular.module('coop',['ui.router', 'firebase'])
           controller: 'crtlContactanos'
       })
 
+     .state('simulador', {
+          url: '/simulador',
+          templateUrl: 'templates/simulador.html',
+          controller: 'crtlSimulador'
+      })
+
 
   $urlRouterProvider.otherwise('/');
 
 })
 
-.controller('crtlHome', function($scope, $rootScope) {
+.controller('crtlHome', function($scope, $rootScope, $state) {
   $rootScope.state = 'home';
+
+  $scope.showSimulador = function() {
+    $state.go('simulador');
+  }
 })
 
 .controller('crtlCuentas', function($scope, $rootScope) {
@@ -116,15 +126,9 @@ angular.module('coop',['ui.router', 'firebase'])
   }
 })
 
-.controller('crtlSuscripcion', function($scope, $firebase, $firebaseAuth) {
+.controller('crtlSuscripcion', function($scope, $firebase) {
 
   var clientFB;
-
-  // $scope.nombre = 'luis';
-  // $scope.apellido = 'gonzalez';
-  // $scope.email = 'lgonzalez';
-  // $scope.telefono = '023423';
-  // $scope.comentario = 'asdfads';
 
   $scope.suscribir = function() {
     var path = 'https://coopartamos-4616a.firebaseio.com/suscriptores/' + encodeMail($scope.email);
@@ -237,4 +241,8 @@ angular.module('coop',['ui.router', 'firebase'])
        }
     });
   }
+})
+
+.controller('crtlSimulador', function($scope, $firebase, $firebaseAuth) {
+
 });
