@@ -244,5 +244,22 @@ angular.module('coop',['ui.router', 'firebase'])
 })
 
 .controller('crtlSimulador', function($scope, $firebase, $firebaseAuth) {
+	
+	$scope.calcular = function() {
+		$scope.letras = new Array();
+		var interes = 11;
+		
+		for(i=1; i <= $scope.plazo; i++) {
+			var letra = {};
+			letra.numero = i;
+			letra.vencimiento = "10/09/2018";
+			letra.saldoCapital = $scope.monto;
+			letra.capital = $scope.monto;
+			letra.cuota = $scope.monto / $scope.plazo;
+			letra.interes = 11.57;
+			letra.otros = 19.00;
+			$scope.letras.push(letra);
+		}
+	}
 
 });
