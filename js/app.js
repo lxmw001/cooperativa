@@ -37,10 +37,22 @@ angular.module('coop',['ui.router', 'firebase'])
           controller: 'crtlMicro'
       })
 
-     .state('conocenos', {
-          url: '/conocenos',
-          templateUrl: 'templates/conocenos.html',
-          controller: 'crtlConocenos'
+     .state('quienes_somos', {
+          url: '/quienes_somos',
+          templateUrl: 'templates/quienes_somos.html',
+          controller: 'crtlQuienesSomos'
+      })
+
+     .state('socios', {
+          url: '/socios',
+          templateUrl: 'templates/socios.html',
+          controller: 'crtlSocios'
+      })
+
+     .state('comunidad', {
+          url: '/comunidad',
+          templateUrl: 'templates/comunidad.html',
+          controller: 'crtlComunidad'
       })
 
      .state('contactanos', {
@@ -84,8 +96,16 @@ angular.module('coop',['ui.router', 'firebase'])
   $rootScope.state = 'micro';
 })
 
-.controller('crtlConocenos', function($scope, $rootScope) {
-  $rootScope.state = 'conocenos';
+.controller('crtlQuienesSomos', function($scope, $rootScope) {
+  $rootScope.state = 'somos';
+})
+
+.controller('crtlSocios', function($scope, $rootScope) {
+  $rootScope.state = 'socios';
+})
+
+.controller('crtlComunidad', function($scope, $rootScope) {
+  $rootScope.state = 'comunidad';
 })
 
 .controller('crtlContactanos', function($scope, $rootScope) {
@@ -157,12 +177,20 @@ angular.module('coop',['ui.router', 'firebase'])
 
   encodeMail = function(email) {
     var encoded = email.split('.').join('@punto@');
+    encoded = encoded.split('#').join('@num@');
+    encoded = encoded.split('$').join('@money@');
+    encoded = encoded.split('[').join('@corcha@');
+    encoded = encoded.split(']').join('@corchc@');
     console.log(encoded);
     return encoded;
   }
 
   decodeMail = function(email) {
-    return email.replace('@punto@', '.');
+    return email.replace('@punto@', '.')
+      .replace('@num@', '#')
+      .replace('@money@', '$')
+      .replace('@corcha@', '[')
+      .replace('@corchc@', ']');
   }
 
   verificarSuscriptor = function(callback) {
@@ -244,11 +272,11 @@ angular.module('coop',['ui.router', 'firebase'])
 })
 
 .controller('crtlSimulador', function($scope, $firebase, $firebaseAuth) {
-	
+
 	$scope.calcular = function() {
 		$scope.letras = new Array();
 		var interes = 11;
-		
+
 		for(i=1; i <= $scope.plazo; i++) {
 			var letra = {};
 			letra.numero = i;
