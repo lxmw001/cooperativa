@@ -75,9 +75,28 @@ angular.module('coop',['ui.router', 'firebase'])
 .controller('crtlHome', function($scope, $rootScope, $state) {
   $rootScope.state = 'home';
 
-  $scope.showSimulador = function() {
-    $state.go('simulador');
+  $scope.showAhorroVista = function() {
+    $state.go('ahorros');
   }
+
+  $scope.showAhorroFuturo = function() {
+    // $state.go('');
+  }
+
+  $scope.showDepositoPlazoFijo = function() {
+    $state.go('plazo_fijo');
+  }
+
+  $scope.showMicroCredito = function() {
+    $state.go('micro_creditos');
+  }
+
+  $scope.showCreditoConsumo = function() {
+    $state.go('creditos');
+  }
+
+
+
 })
 
 .controller('crtlCuentas', function($scope, $rootScope) {

@@ -15,3 +15,38 @@
   margin-right: 5px;
   margin-left: 5px;
 }
+.img-carousel {
+  height: 235px;
+}
+
+.move-card {
+  cursor:pointer !important;
+  -webkit-transform:translateY(0) !important;
+  transition: transform .5s ease !important;
+}
+
+.move-card:hover {
+  -webkit-transform:translateY(10px) !important;
+}
+
+.slider .slides li .caption {
+  top: 69% !important;
+}
+
+/*style pages*/
+.title-service {
+  /*width: 100%;*/
+  padding: 1px;
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+
+  /*color: #fff;*/
+}
+
+.content-service {
+  width: 100%;
+  padding: 15px;
+}
+/*style for ul*/
+.padding {
+  padding-left: 20px;
+}
