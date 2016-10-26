@@ -1,3 +1,52 @@
+<div class="section white">
+  <div class="row container">
+    <!-- <h2 class="header">Coopartamos en la Comunidad</h2> -->
+    <!-- <p class="grey-text text-darken-3 lighten-3"> -->
+    </p>
+    <div class="card ryellow lighten-4 hoverable">
+      <div class="card-content">
+        <span class="card-title">Formulario de Contacto</span>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12 m6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="icon_prefix" type="text" class="validate">
+                <label for="icon_prefix">Nombre</label>
+              </div>
+              <div class="input-field col s12 m6">
+                <i class="material-icons prefix">phone</i>
+                <input id="icon_telephone" type="tel" class="validate">
+                <label for="icon_telephone">Telefono</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">email</i>
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix"></i>
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Comentario</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <a class="waves-effect waves-light btn"><i class="material-icons right">send</i>Enviar Comentario</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
 <div class="row">
   <div class="col s12 m12">
     <div class="card ryellow lighten-4 hoverable">
@@ -42,8 +91,9 @@
     </div>
   </div>
 </div>
-
-<div class="row">
+ -->
+ <div class="section white">
+  <div class="row container">
   <div class="col s12 m12 l6">
     <div class="card ryellow lighten-4 hoverable">
       <div class="card-content">
@@ -63,7 +113,10 @@
     </div>
   </div>
 </div>
+</div>
 
+<div class="section white">
+  <div class="row container">
 <div class="row">
   <div class="col s12 m12 l6">
     <div class="card ryellow lighten-4 hoverable">
@@ -83,3 +136,27 @@
     </div>
   </div>
 </div>
+</div>
+
+<div class="section white">
+  <div class="row container">
+    <div id="map"></div>
+  </div>
+</div>
+
+<script>
+  function initMap() {
+    var coopartamos = {lat: -25.363, lng: 131.044};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: coopartamos,
+      scrollwheel: false
+    });
+    var marker = new google.maps.Marker({
+      position: coopartamos,
+      map: map
+    });
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGrD-ogbYlI3vfUdpFSLSHYfuefF7NetE&callback=initMap">
+</script>
