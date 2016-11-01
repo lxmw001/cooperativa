@@ -1,18 +1,36 @@
 /*Navbar*/
-nav {
+.cnav {
   background-color: transparent !important;
-  background: -webkit-linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.3)) !important;
-  background: -moz-linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.3));
-  background: -o-linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.3));
-  background: linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.3)) !important;
+  background: -webkit-linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.0)) !important;
+  background: -moz-linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.0));
+  background: -o-linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.0));
+  background: linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.0)) !important;
   height: 100px !important;
   z-index: 200 !important;
-  padding-top: 20px;
+}
+
+nav ul, nav li, nav a {
+  height: 100% !important;
+}
+
+nav a {
+  display: inline-table;
+  vertical-align: middle;
+  /*padding-top: 50%;*/
+}
+
+.customNav {
+  background-color: rgba(141, 79, 164, 1) !important;
+  padding-top: 0 !important;
+  height: auto !important;
 }
 
 /*Slider styles*/
 .slider .slides li .caption {
-  bottom: 0% !important;
+  top: auto !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  left: auto !important;
 }
 
 .slider {
@@ -22,7 +40,16 @@ nav {
 }
 
 .slides {
+
   height: 600px !important;
+}
+
+.slider img {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+    width: 100%;
+    filter: drop-shadow(10px -16px 30px black);
+    -webkit-filter: drop-shadow(10px -16px 30px black);
+    -moz-filter: drop-shadow(10px -16px 30px black);
 }
 /*Media querys for slider*/
 @media only screen and (min-width: 2048px) {

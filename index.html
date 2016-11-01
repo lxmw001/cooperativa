@@ -51,14 +51,31 @@
           //ready: function() { alert('Ready'); }, // Callback for Modal open
           //complete: function() { alert('Closed'); } // Callback for Modal close
         });
+
+        console.log("init");
+        var altura = $('nav').offset().top;
+
+        $(window).on('scroll', function(){
+          if ( $(window).scrollTop() > altura ){
+            $('nav').addClass('customNav');
+            console.log("saliendo");
+          } else {
+            $('nav').removeClass('customNav');
+            console.log("entrando");
+          }
+        });
+
       });
+
+
+
     </script>
   </head>
   <body ng-app="coop">
     <header>
       <div class="navbar-fixed">
       <!-- <div class="navbar-fixed"> -->
-        <nav>
+        <nav ng-class="{cnav: state=='home'}">
           <div class="nav-wrapper cnavbar">
           <!-- <div class="nav-wrapper deep-purple lighten-2"> -->
             <a href="#!" class="brand-logo"><i><img src="img/logo.png" style="width:100px; padding-top: 10px;"></i> COOPARTAMOS</a>
