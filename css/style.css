@@ -1,4 +1,45 @@
+/*Navbar*/
+nav {
+  background-color: transparent !important;
+  background: -webkit-linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.3)) !important;
+  background: -moz-linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.3));
+  background: -o-linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.3));
+  background: linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.3)) !important;
+  height: 100px !important;
+  z-index: 200 !important;
+  padding-top: 20px;
+}
 
+/*Slider styles*/
+.slider .slides li .caption {
+  bottom: 0% !important;
+}
+
+.slider {
+  margin-top: -100px;
+  height: 640px !important;
+  z-index: -1 !important;
+}
+
+.slides {
+  height: 600px !important;
+}
+/*Media querys for slider*/
+@media only screen and (min-width: 2048px) {
+  .slider {
+    height: 1140px !important;
+  }
+
+  .slides {
+    height: 1100px !important;
+  }
+}
+
+.slider .slides li .caption {
+  bottom: 0 !important;
+}
+
+/*Utils*/
 .content {
   padding: 20px;
 }
@@ -27,10 +68,6 @@
 
 .move-card:hover {
   -webkit-transform:translateY(10px) !important;
-}
-
-.slider .slides li .caption {
-  top: 69% !important;
 }
 
 /*style pages*/
@@ -65,3 +102,4 @@
 .item:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
+
