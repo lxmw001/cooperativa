@@ -130,6 +130,23 @@ nav a {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+/*info div top*/
+.info {
+  position: relative;/*fixed*/
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  color: #3A44FD;
+  padding: 10px;
+}
+
+.info label {
+  font-weight: bold;
+  font-size: 120%;
+  font-style: italic;
+}
+
 /*Filtros imagen*/
 .azul:before {
   background: rgba(0,0,255, 0.5);
