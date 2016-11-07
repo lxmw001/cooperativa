@@ -130,3 +130,7 @@ nav a {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+/*Filtros imagen*/
+.azul:before {
+  background: rgba(0,0,255, 0.5);
+}
