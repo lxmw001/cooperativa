@@ -10,7 +10,7 @@
         slideSpeed : 100,
         paginationSpeed : 400,
         rewindSpeed : 500,
-        items : 4,
+        items : 3,
 
         //Autoplay
         autoPlay : true,
@@ -36,70 +36,99 @@
 </script>
 
 <div class="slider">
-      <ul class="slides">
-        <li>
-          <img src="img/slider1.JPG">
-          <div class="caption right-align">
-            <h3>Bienvenido a Coopratamos</h3>
-            <h5 class="light grey-text text-lighten-3">Siempre pensando en ti..</h5>
-          </div>
-        </li>
-        <li>
-          <img src="img/slider2.jpg">
-          <div class="caption right-align">
-            <h5 class="light grey-text text-lighten-3">Tienes un un sueño, construyamoslo juntos.</h5>
-          </div>
-        </li>
-        <li>
-          <img src="img/slider3.png">
-          <div class="caption right-align">
-            <h5 class="light grey-text text-lighten-3">Gracias a tu confianza, en coopartamos seguimos creciendo.</h5>
-          </div>
-        </li>
-        <li>
-          <img src="img/slider4.JPG">
-          <div class="caption right-align">
-            <h5 class="light grey-text text-lighten-3">Atrévete, somos tu mejor opción para hacer creer tu negocio.</h5>
-          </div>
-        </li>
-      </ul>
-    </div>
+  <ul class="slides">
+    <li>
+      <div class="colorear img-slider azul">
+        <img src="img/slider1.JPG">
+      </div>
+      <div class="caption center-align">
+        <h3>Bienvenido a Coopratamos</h3>
+        <h5 class="light grey-text text-lighten-3">Siempre pensando en ti..</h5>
+      </div>
+    </li>
+    <li>
+      <div class="colorear img-slider azul">
+        <img src="img/slider2.jpg">
+      </div>
+      <div class="caption center-align">
+        <h3 class="light grey-text text-lighten-3">Tienes un un sueño, construyamoslo juntos.</h3>
+      </div>
+    </li>
+    <li>
+      <div class="colorear img-slider azul">
+        <img src="img/slider3.png">
+      </div>
+      <div class="caption center-align">
+        <h3 class="light grey-text text-lighten-3">Gracias a tu confianza, en coopartamos seguimos creciendo.</h3>
+      </div>
+    </li>
+    <li>
+      <div class="colorear img-slider azul">
+        <img src="img/slider4.JPG">
+      </div>
+      <div class="caption center-align">
+        <h3 class="light grey-text text-lighten-3">Atrévete, somos tu mejor opción para hacer creer tu negocio.</h3>
+      </div>
+    </li>
+  </ul>
+</div>
 
-<div class="row">
-  <div class="col s12 l12">
-    <!-- <div class="slider">
-      <ul class="slides">
-        <li>
-          <img src="img/slider1.JPG">
-          <div class="caption right-align">
-            <h3>Bienvenido a Coopratamos</h3>
-            <h5 class="light grey-text text-lighten-3">Siempre pensando en ti..</h5>
-          </div>
-        </li>
-        <li>
-          <img src="img/slider2.jpg">
-          <div class="caption right-align">
-            <h4 class="light grey-text text-lighten-3">Tienes un un sueño, construyamoslo juntos.</h4>
-          </div>
-        </li>
-        <li>
-          <img src="img/slider3.png">
-          <div class="caption right-align">
-            <h4 class="light grey-text text-lighten-3">Gracias a tu confianza, en coopartamos seguimos creciendo.</h4>
-          </div>
-        </li>
-        <li>
-          <img src="img/slider4.JPG">
-          <div class="caption right-align">
-            <h4 class="light grey-text text-lighten-3">Atrévete, somos tu mejor opción para hacer creer tu negocio.</h4>
-          </div>
-        </li>
-      </ul>
-    </div> -->
+<div class="owl-carousel">
+  <div class="content-carousel" ng-click="showAhorroVista()">
+    <img class="circle custom-img" src="img/dep_vista.jpg">
+    <h3>Ahorro a la Vista</h3>
+    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+  </div>
+  <div class="content-carousel" ng-click="showAhorroFuturo()">
+    <img class="circle custom-img" src="img/service2.jpg">
+    <h3>Ahorro Futuro</h3>
+    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+  </div>
+  <div class="content-carousel" ng-click="showDepositoPlazoFijo()">
+    <img class="circle custom-img" src="img/plazo_fijo.jpg">
+    <h3>Deposito Plazo Fijo</h3>
+    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+  </div>
+  <div class="content-carousel" ng-click="showMicroCredito()">
+    <img class="circle custom-img" src="img/micro_credito.jpg">
+    <h3>Micro - Crédito</h3>
+    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+  </div>
+  <div class="content-carousel" ng-click="showCreditoConsumo()">
+    <img class="circle custom-img" src="img/cred_consumo.jpg">
+    <h3>Crédito de Consumo</h3>
+    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
   </div>
 
-  <div class="col s12 l12">
-    <div class="owl-carousel">
+  <!-- <div class="card move-card" ng-click="showAhorroVista()">
+    <div class="card-image">
+      <img class="img-carousel" src="img/dep_vista.jpg">
+    </div>
+  </div>
+  <div class="card move-card" ng-click="showAhorroFuturo()">
+    <div class="card-image">
+      <img class="img-carousel" src="img/service2.jpg">
+    </div>
+  </div>
+  <div class="card move-card" ng-click="showDepositoPlazoFijo()">
+    <div class="card-image">
+      <img class="img-carousel" src="img/plazo_fijo.jpg">
+    </div>
+  </div>
+  <div class="card move-card" ng-click="showMicroCredito()">
+    <div class="card-image">
+      <img class="img-carousel" src="img/micro_credito.jpg">
+    </div>
+  </div>
+  <div class="card move-card" ng-click="showCreditoConsumo()">
+    <div class="card-image">
+      <img class="img-carousel" src="img/cred_consumo.jpg">
+    </div>
+  </div> -->
+</div>
+
+  <!-- <div class="col s12 l12"> -->
+    <!-- <div class="owl-carousel">
       <div class="card move-card" ng-click="showAhorroVista()">
         <div class="card-image">
           <img class="img-carousel" src="img/dep_vista.jpg">
@@ -126,5 +155,5 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div> -->
+<!-- </div> -->
