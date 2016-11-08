@@ -1,6 +1,17 @@
 /*Navbar*/
+.header-fixed {
+  position: fixed;
+  height: auto;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+}
+
+nav {
+  background: rgba(141, 79, 164, 1) !important;
+}
 .cnav {
-  background-color: transparent !important;
+  padding: 10px 0;
   background: -webkit-linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.0)) !important;
   background: -moz-linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.0));
   background: -o-linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.0));
@@ -17,12 +28,36 @@ nav a {
   display: inline-table;
   vertical-align: middle;
   /*padding-top: 50%;*/
+  font-size: 120% !important;
+  font-weight: bold;
 }
 
 .customNav {
-  background-color: rgba(141, 79, 164, 1) !important;
+  background: rgba(141, 79, 164, 1) !important;
   padding-top: 0 !important;
-  height: auto !important;
+  height: 65px !important;
+}
+
+/*info div top*/
+.info {
+  position: relative;/*fixed*/
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  color: #3A44FD;
+  padding: 5px;
+}
+
+.info label {
+  font-weight: bold;
+  font-size: 120%;
+  font-style: italic;
+}
+
+/*Section*/
+section {
+  margin-top: 100px !important;
 }
 
 /*Slider styles*/

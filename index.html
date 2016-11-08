@@ -52,58 +52,46 @@
           //complete: function() { alert('Closed'); } // Callback for Modal close
         });
 
-        console.log("init");
         var altura = $('nav').offset().top;
-
         $(window).on('scroll', function(){
           if ( $(window).scrollTop() > altura ){
             $('nav').addClass('customNav');
-            console.log("saliendo");
           } else {
             $('nav').removeClass('customNav');
-            console.log("entrando");
           }
         });
-
       });
-
-
-
     </script>
   </head>
   <body ng-app="coop">
-    <header>
-    <div class="info">
-      <label>Celular: 098675367</label>
-      <label>Correo: oiertjeru@gfndfsiug.com</label>
-      <label>Dirección: Quito</label>
-    </div>
-      <div class="navbar-fixed">
-      <!-- <div class="navbar-fixed"> -->
-        <nav ng-class="{cnav: state=='home'}">
-          <div class="nav-wrapper cnavbar">
-          <!-- <div class="nav-wrapper deep-purple lighten-2"> -->
-            <a href="#!" class="brand-logo"><i><img src="img/logo.jpg" style="height:100%; padding-left: 10px;"></i></a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="small material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-              <li ng-class="{active: state=='home'}"><a ui-sref="home"><span>Home</span></a></li>
-              <li ng-class="{active: state=='somos'}"><a ui-sref="quienes_somos"><span>¿Quienes Somos?</span></a></li>
-              <li ng-class="{active: state=='socios'}"><a ui-sref="socios" class="dropbtn"><span>Beneficios de se Socios</span></a></li>
-              <li ng-class="{active: state=='comunidad'}"><a ui-sref="comunidad" class="dropbtn"><span>Coopartamos en la Comunidad</span></a></li>
-              <li ng-class="{active: state=='contactanos'}"><a ui-sref="contactanos" class="dropbtn"><span>Contáctanos</span></a></li>
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-              <li ng-class="{active: state=='home'}"><a ui-sref="home"><span>Home</span></a></li>
-              <li ng-class="{active: state=='cuentas'}"><a ui-sref="ahorros"><span>Cuentas</span></a></li>
-              <li ng-class="{active: state=='depositos'}"><a ui-sref="plazo_fijo" class="dropbtn"><span>Depositos</span></a></li>
-              <li ng-class="{active: state=='creditos'}"><a ui-sref="creditos" class="dropbtn"><span>Creditos</span></a></li>
-              <li ng-class="{active: state=='micro'}"><a ui-sref="micro_creditos" class="dropbtn"><span>Micro Creditos</span></a></li>
-              <li ng-class="{active: state=='conocenos'}"><a ui-sref="conocenos" class="dropbtn"><span>Conocenos</span></a></li>
-              <li ng-class="{active: state=='contactanos'}"><a ui-sref="contactanos" class="dropbtn"><span>Contáctanos</span></a></li>
-            </ul>
-          </div>
-        </nav>
+    <header class="header-fixed">
+      <div class="info">
+        <label>Celular: 098675367</label>
+        <label>Correo: oiertjeru@gfndfsiug.com</label>
+        <label>Dirección: Quito</label>
       </div>
+      <nav ng-class="{cnav: state=='home'}">
+        <div class="nav-wrapper cnavbar">
+          <a href="#!" class="brand-logo"><i><img src="img/logo.jpg" style="height:100%; padding-left: 10px;"></i></a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="small material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li ng-class="{active: state=='home'}"><a ui-sref="home"><span>Home</span></a></li>
+            <li ng-class="{active: state=='somos'}"><a ui-sref="quienes_somos"><span>¿Quienes Somos?</span></a></li>
+            <li ng-class="{active: state=='socios'}"><a ui-sref="socios" class="dropbtn"><span>Beneficios de se Socios</span></a></li>
+            <li ng-class="{active: state=='comunidad'}"><a ui-sref="comunidad" class="dropbtn"><span>Coopartamos en la Comunidad</span></a></li>
+            <li ng-class="{active: state=='contactanos'}"><a ui-sref="contactanos" class="dropbtn"><span>Contáctanos</span></a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li ng-class="{active: state=='home'}"><a ui-sref="home"><span>Home</span></a></li>
+            <li ng-class="{active: state=='cuentas'}"><a ui-sref="ahorros"><span>Cuentas</span></a></li>
+            <li ng-class="{active: state=='depositos'}"><a ui-sref="plazo_fijo" class="dropbtn"><span>Depositos</span></a></li>
+            <li ng-class="{active: state=='creditos'}"><a ui-sref="creditos" class="dropbtn"><span>Creditos</span></a></li>
+            <li ng-class="{active: state=='micro'}"><a ui-sref="micro_creditos" class="dropbtn"><span>Micro Creditos</span></a></li>
+            <li ng-class="{active: state=='conocenos'}"><a ui-sref="conocenos" class="dropbtn"><span>Conocenos</span></a></li>
+            <li ng-class="{active: state=='contactanos'}"><a ui-sref="contactanos" class="dropbtn"><span>Contáctanos</span></a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <section ui-view></section>
     <footer class="page-footer deep-purple lighten-3">
