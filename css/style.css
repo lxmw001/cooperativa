@@ -40,6 +40,7 @@ nav a {
 .customNav {
   background: rgba(141, 79, 164, 1) !important;
   padding-top: 0 !important;
+  padding-bottom: 0 !important;
   height: 65px !important;
 }
 
@@ -80,25 +81,16 @@ section {
 }
 
 .slides {
-
   height: 600px !important;
 }
 
 .slider img {
-  /*background-color: rgba(0, 0, 0, 0.5) !important;*/
     width: 100%;
-    /*filter: drop-shadow(10px -16px 30px black);
-    -webkit-filter: drop-shadow(10px -16px 30px black);
-    -moz-filter: drop-shadow(10px -16px 30px black);*/
 }
 
 .img-slider {
   width: 100%;
-  /*overflow:hidden;*/
   height: inherit;
-  /*border: solid 200px rgba(0,0,0,0.3);*/
-
-  /*background-color: rgba(0,0,255, 0.5) !important;*/
 }
 
 /*Caption slider*/
@@ -160,7 +152,16 @@ section {
 
 .content-carousel p {
   text-align: center;
-  font-weight: bold;
+  /*font-weight: bold;*/
+}
+
+.item-carousel {
+  padding: 20px 0;
+}
+
+.item-carousel:hover {
+  background-color: rgba(141, 79, 164, 0.3);
+  border-radius: 10px;
 }
 
 .custom-img {
@@ -236,8 +237,8 @@ section {
 .colorear {
   position: relative;
   /* Estas dos propiedades sólo sirven para centrar */
-  display: table;
-  margin:0 auto;
+  /*display: table;*/
+  /*margin:0 auto;*/
 }
 
 .colorear:before {
@@ -253,4 +254,37 @@ section {
 }
 .azul:before {
   background: rgba(93, 84, 173, 0.5);
+}
+
+.parallax {
+  z-index: auto !important;
+}
+
+.parallax img {
+  z-index: -1 !important;
+}
+
+.content-parallax {
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 40px;
+  width: 50%;
+  z-index: 2;
+}
+
+.top {
+  top:20px;
+}
+
+.bottom {
+  bottom: 20px;
+}
+
+.left {
+  left: 20px;
+}
+
+.right {
+  right: 20px;
 }
