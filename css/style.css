@@ -288,3 +288,25 @@ section {
 .right {
   right: 20px;
 }
+
+/*footer*/
+.redes {
+  /*display: -webkit-box;*/
+  margin: 0 auto !important;
+  text-align: center;
+  -webkit-transition: all 2s; /* For Safari 3.1 to 6.0 */
+  transition: all 2s !important;
+}
+
+img.alineadoTextoImagenCentro{
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.hidden span {
+  display: none !important;
+}
+
+.hidden:hover  span {
+  display: inline-block !important;
+}
