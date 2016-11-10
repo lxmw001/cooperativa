@@ -56,7 +56,9 @@
         $(window).on('scroll', function(){
           if ( $(window).scrollTop() > altura ){
             $('nav').addClass('customNav');
+            $('.info').addClass('hide');
           } else {
+            $('.info').removeClass('hide');
             $('nav').removeClass('customNav');
           }
         });
@@ -77,8 +79,8 @@
           <ul class="right hide-on-med-and-down">
             <li ng-class="{active: state=='home'}"><a ui-sref="home"><span>Home</span></a></li>
             <li ng-class="{active: state=='somos'}"><a ui-sref="quienes_somos"><span>¿Quienes Somos?</span></a></li>
-            <li ng-class="{active: state=='socios'}"><a ui-sref="socios" class="dropbtn"><span>Beneficios de se Socios</span></a></li>
-            <li ng-class="{active: state=='comunidad'}"><a ui-sref="comunidad" class="dropbtn"><span>Coopartamos en la Comunidad</span></a></li>
+            <li ng-class="{active: state=='socios'}"><a ui-sref="socios" class="dropbtn"><span>Socios</span></a></li>
+            <li ng-class="{active: state=='comunidad'}"><a ui-sref="comunidad" class="dropbtn"><span>Comunidad</span></a></li>
             <li ng-class="{active: state=='contactanos'}"><a ui-sref="contactanos" class="dropbtn"><span>Contáctanos</span></a></li>
           </ul>
           <ul class="side-nav" id="mobile-demo">

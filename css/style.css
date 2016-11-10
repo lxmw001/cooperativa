@@ -1,4 +1,8 @@
 /*Navbar*/
+header {
+  -webkit-transition: all 2s; /* For Safari 3.1 to 6.0 */
+  transition: all 1s;
+}
 .header-fixed {
   position: fixed;
   height: auto;
@@ -53,6 +57,10 @@ nav a {
   background-color: #fff;
   color: #3A44FD;
   padding: 5px;
+}
+
+.hide {
+  display: none;
 }
 
 .info label {
@@ -252,10 +260,24 @@ section {
   left: 0;
   right: 0;
 }
+/*colores filtro*/
 .azul:before {
   background: rgba(93, 84, 173, 0.5);
 }
 
+.amarillo:before {
+  background: rgba(231, 239, 0, 0.5);
+}
+
+.rojo:before {
+  background: rgba(239, 0, 0, 0.5);
+}
+
+.verde:before {
+  background: rgba(33, 102, 58, 0.5);
+}
+
+/*parallax*/
 .parallax {
   z-index: auto !important;
 }
@@ -274,19 +296,19 @@ section {
 }
 
 .top {
-  top:20px;
+  top:20%;
 }
 
 .bottom {
-  bottom: 20px;
+  bottom: 20%;
 }
 
 .left {
-  left: 20px;
+  left: 5%;
 }
 
 .right {
-  right: 20px;
+  right: 5%;
 }
 
 /*footer*/
@@ -294,13 +316,18 @@ section {
   /*display: -webkit-box;*/
   margin: 0 auto !important;
   text-align: center;
-  -webkit-transition: all 2s; /* For Safari 3.1 to 6.0 */
-  transition: all 2s !important;
+
 }
 
 img.alineadoTextoImagenCentro{
   vertical-align: middle;
   padding-right: 10px;
+}
+
+.hidden {
+    margin: 4px;
+    -webkit-transition: all 2s; /* For Safari 3.1 to 6.0 */
+  transition: all 2s !important;
 }
 
 .hidden span {
@@ -309,4 +336,9 @@ img.alineadoTextoImagenCentro{
 
 .hidden:hover  span {
   display: inline-block !important;
+}
+
+/*contenidos*/
+.info-content p {
+  text-align: justify !important;
 }
