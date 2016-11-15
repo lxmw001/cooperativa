@@ -52,7 +52,7 @@
           //complete: function() { alert('Closed'); } // Callback for Modal close
         });
 
-        var altura = $('nav').offset().top;
+        var altura = $('nav').offset().top + 150;
         $(window).on('scroll', function(){
           if ( $(window).scrollTop() > altura ){
             $('nav').addClass('customNav');

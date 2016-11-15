@@ -211,7 +211,7 @@ section {
 
 /*map*/
 #map {
-  height: 400px;
+  height: 600px;
   width: 100%;
  }
 
@@ -339,6 +339,22 @@ img.alineadoTextoImagenCentro{
 }
 
 /*contenidos*/
+.justificado {
+  text-align: justify !important;
+}
+
 .info-content p {
   text-align: justify !important;
+}
+/*item de listas*/
+
+ul li {
+  padding-top: 10px;
+}
+
+ul i {
+  padding: 1px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  margin-right: 10px;
 }
