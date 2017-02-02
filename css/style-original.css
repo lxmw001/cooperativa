@@ -1,0 +1,360 @@
+/*Navbar*/
+header {
+  -webkit-transition: all 2s; /* For Safari 3.1 to 6.0 */
+  transition: all 1s;
+}
+.header-fixed {
+  position: fixed;
+  height: auto;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+}
+
+nav {
+  padding: 5px 0;
+  background: rgba(141, 79, 164, 1) !important;
+  -webkit-transition: all 2s; /* For Safari 3.1 to 6.0 */
+  transition: all 1s;
+}
+.cnav {
+  padding: 20px 0;
+  /*background: -webkit-linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.0)) !important;*/
+  /*background: -moz-linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.0));*/
+  /*background: -o-linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.0));*/
+  /*background: linear-gradient(rgba(141, 79, 164, 1), rgba(141, 79, 164, 0.0)) !important;*/
+  background: transparent !important;
+  box-shadow: none;
+  height: 100px !important;
+  z-index: 200 !important;
+}
+
+nav ul, nav li, nav a {
+  height: 100% !important;
+}
+
+nav a {
+  display: inline-table;
+  vertical-align: middle;
+  /*padding-top: 50%;*/
+  /*font-size: 120% !important;*/
+  font-weight: bold;
+}
+
+.customNav {
+  background: rgba(141, 79, 164, 1) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  height: 65px !important;
+}
+
+/*info div top*/
+.info {
+  position: relative;/*fixed*/
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  color: #3A44FD;
+  padding: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+.info label {
+  font-weight: bold;
+  /*font-size: 120%;*/
+  font-style: italic;
+}
+
+/*Section*/
+section {
+  margin-top: 145px !important;
+}
+
+/*Slider styles*/
+.slider .slides li .caption {
+  top: 50% !important;
+  /*bottom: 0 !important;
+  right: 0 !important;
+  left: auto !important;*/
+}
+
+.slider {
+  margin-top: -100px;
+  height: 640px !important;
+  z-index: -1 !important;
+}
+
+.slides {
+  height: 600px !important;
+}
+
+.slider img {
+    width: 100%;
+}
+
+.img-slider {
+  width: 100%;
+  height: inherit;
+}
+
+/*Caption slider*/
+
+.slider .caption h3 {
+  font-family: "Circular","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+/*Media querys for slider*/
+@media only screen and (min-width: 2048px) {
+  .slider {
+    height: 1140px !important;
+  }
+
+  .slides {
+    height: 1100px !important;
+  }
+}
+
+.slider .slides li .caption {
+  bottom: 0 !important;
+}
+
+/*Utils*/
+.content {
+  padding: 20px;
+}
+
+/*.caption, .owl-carousel .card-title {
+    background-color: rgba(0, 0, 0, 0.53);
+}*/
+
+.card-title {
+  width: 100%;
+}
+/*stilos carrusel*/
+.owl-carousel {
+  padding-top: 15px;
+}
+
+.owl-carousel .card {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.content-carousel {
+  /*padding: 0 75px;*/
+  padding: 0 15%;
+  margin: 0 auto ;
+  text-align: center;
+}
+
+.content-carousel h3 {
+  font-size: 250%;
+  font-weight: bolder;
+}
+
+.content-carousel p {
+  text-align: center;
+  /*font-weight: bold;*/
+}
+
+.item-carousel {
+  padding: 20px 0;
+}
+
+.item-carousel:hover {
+  background-color: rgba(141, 79, 164, 0.3);
+  border-radius: 10px;
+}
+
+.custom-img {
+  width: 200px;
+  height: 200px;
+}
+
+.img-carousel {
+  height: 235px;
+}
+
+.move-card {
+  cursor:pointer !important;
+  -webkit-transform:translateY(0) !important;
+  transition: transform .5s ease !important;
+}
+
+.move-card:hover {
+  -webkit-transform:translateY(10px) !important;
+}
+
+/*style pages*/
+.title-service {
+  /*width: 100%;*/
+  padding: 1px;
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+
+  /*color: #fff;*/
+}
+
+.content-service {
+  width: 100%;
+  padding: 15px;
+}
+/*style for ul*/
+.padding {
+  padding-left: 20px;
+}
+
+/*map*/
+#map {
+  height: 600px;
+  width: 100%;
+ }
+
+.item {
+  background-color: rgba(1, 1, 1, 0.1);
+  /*margin: 5px;*/
+}
+
+.item:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*info div top*/
+.info {
+  position: relative;/*fixed*/
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  color: #3A44FD;
+  padding: 10px;
+}
+
+.info label {
+  font-weight: bold;
+  font-size: 120%;
+  font-style: italic;
+}
+
+/*Filtros imagen*/
+.colorear {
+  position: relative;
+  /* Estas dos propiedades sólo sirven para centrar */
+  /*display: table;*/
+  /*margin:0 auto;*/
+}
+
+.colorear:before {
+  /*background: rgba(0,0,255, 0.5);*/
+  content: "";
+  display: block;
+  position: absolute;
+  /* Todas las posiciones a cero */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/*colores filtro*/
+.azul:before {
+  background: rgba(93, 84, 173, 0.5);
+}
+
+.amarillo:before {
+  background: rgba(231, 239, 0, 0.5);
+}
+
+.rojo:before {
+  background: rgba(239, 0, 0, 0.5);
+}
+
+.verde:before {
+  background: rgba(33, 102, 58, 0.5);
+}
+
+/*parallax*/
+.parallax {
+  z-index: auto !important;
+}
+
+.parallax img {
+  z-index: -1 !important;
+}
+
+.content-parallax {
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 40px;
+  width: 50%;
+  z-index: 2;
+}
+
+.top {
+  top:20%;
+}
+
+.bottom {
+  bottom: 20%;
+}
+
+.left {
+  left: 5%;
+}
+
+.right {
+  right: 5%;
+}
+
+/*footer*/
+.redes {
+  /*display: -webkit-box;*/
+  margin: 0 auto !important;
+  text-align: center;
+
+}
+
+img.alineadoTextoImagenCentro{
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.hidden {
+    margin: 4px;
+    -webkit-transition: all 2s; /* For Safari 3.1 to 6.0 */
+  transition: all 2s !important;
+}
+
+.hidden span {
+  display: none !important;
+}
+
+.hidden:hover  span {
+  display: inline-block !important;
+}
+
+/*contenidos*/
+.justificado {
+  text-align: justify !important;
+}
+
+.info-content p {
+  text-align: justify !important;
+}
+/*item de listas*/
+
+ul li {
+  padding-top: 10px;
+}
+
+ul i {
+  padding: 1px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  margin-right: 10px;
+}

@@ -1,40 +1,98 @@
 <script type="text/javascript">
-  $(document).ready(function(){
-      $('.slider').slider({
-        indicators: true,
-        interval: 3000
-      });
-      $(".owl-carousel").owlCarousel({
-        //Basic Speeds
-        autoPlay: 300,
-        slideSpeed : 100,
-        paginationSpeed : 400,
-        rewindSpeed : 500,
-        items : 3,
+  // $(document).ready(function(){
+  //     $('.slider').slider({
+  //       indicators: true,
+  //       interval: 3000
+  //     });
+  //     $(".owl-carousel").owlCarousel({
+  //       //Basic Speeds
+  //       autoPlay: 300,
+  //       slideSpeed : 100,
+  //       paginationSpeed : 400,
+  //       rewindSpeed : 500,
+  //       items : 3,
 
-        //Autoplay
-        autoPlay : true,
-        stopOnHover : true,
+  //       //Autoplay
+  //       autoPlay : true,
+  //       stopOnHover : true,
 
-        //Pagination
-        pagination : false,
-        paginationNumbers: true,
+  //       //Pagination
+  //       pagination : false,
+  //       paginationNumbers: true,
 
-        //Lazy load
-        lazyLoad : true,
-        lazyFollow : true,
-        lazyEffect : "fade",
-      });
+  //       //Lazy load
+  //       lazyLoad : true,
+  //       lazyFollow : true,
+  //       lazyEffect : "fade",
+  //     });
 
-      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-      $('.modal-trigger').leanModal({
-        ready: function() { alert('Ready'); }, // Callback for Modal open
-        complete: function() { alert('Closed'); } // Callback for Modal close
-      });
-    });
+  //     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  //     $('.modal-trigger').leanModal({
+  //       ready: function() { alert('Ready'); }, // Callback for Modal open
+  //       complete: function() { alert('Closed'); } // Callback for Modal close
+  //     });
+  //   });
 
 </script>
 
+
+<section class="services-offer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="project-title title"> <span class="sm-title">We are expert in</span>
+            <h2 class="box-header">OUR SERVICES</h2>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="tg-service services-content tg-haslayout col-md-4 ">
+            <div class="tg-border-topleft tg-haslayout">
+              <div class="tg-displaytable">
+                <div class="tg-displaytablecell"> <span class="icons"><img src="images/icon1.png" alt=""></span>
+                  <h3>Financial Planning</h3>
+                  <div class="tg-description">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                  </div>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tg-service services-content tg-haslayout col-md-4">
+            <div class="tg-border-topleft tg-haslayout">
+              <div class="tg-displaytable">
+                <div class="tg-displaytablecell"> <span class="icons"><img src="images/icon2.png" alt=""></span>
+                  <h3>Investment</h3>
+                  <div class="tg-description">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                  </div>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tg-service services-content tg-haslayout col-md-4">
+            <div class="tg-border-topleft tg-haslayout">
+              <div class="tg-displaytable">
+                <div class="tg-displaytablecell"> <span class="icons"><img src="images/icon3.png" alt=""></span>
+                  <h3>Mutual Funds</h3>
+                  <div class="tg-description">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                  </div>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--
 <div class="slider">
   <ul class="slides">
     <li>
@@ -72,7 +130,7 @@
     </li>
   </ul>
 </div>
-
+-->
 <div class="owl-carousel">
   <div class="content-carousel">
     <div class="item-carousel" ng-click="showAhorroVista()">
@@ -110,6 +168,7 @@
     </div>
   </div>
 
+<!-- no vale lo de abajo -->
   <!-- <div class="card move-card" ng-click="showAhorroVista()">
     <div class="card-image">
       <img class="img-carousel" src="img/dep_vista.jpg">
@@ -136,34 +195,3 @@
     </div>
   </div> -->
 </div>
-
-  <!-- <div class="col s12 l12"> -->
-    <!-- <div class="owl-carousel">
-      <div class="card move-card" ng-click="showAhorroVista()">
-        <div class="card-image">
-          <img class="img-carousel" src="img/dep_vista.jpg">
-        </div>
-      </div>
-      <div class="card move-card" ng-click="showAhorroFuturo()">
-        <div class="card-image">
-          <img class="img-carousel" src="img/service2.jpg">
-        </div>
-      </div>
-      <div class="card move-card" ng-click="showDepositoPlazoFijo()">
-        <div class="card-image">
-          <img class="img-carousel" src="img/plazo_fijo.jpg">
-        </div>
-      </div>
-      <div class="card move-card" ng-click="showMicroCredito()">
-        <div class="card-image">
-          <img class="img-carousel" src="img/micro_credito.jpg">
-        </div>
-      </div>
-      <div class="card move-card" ng-click="showCreditoConsumo()">
-        <div class="card-image">
-          <img class="img-carousel" src="img/cred_consumo.jpg">
-        </div>
-      </div>
-    </div>
-  </div> -->
-<!-- </div> -->
