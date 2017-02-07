@@ -11,6 +11,12 @@ angular.module('coop',['ui.router', 'firebase'])
           controller: 'crtlHome'
       })
 
+    .state('servicios', {
+          url: '/servicios',
+          templateUrl: 'templates/servicios.html',
+          controller: 'crtlServicios as vm'
+      })
+
      /*Rutas para Cuentas*/
      .state('ahorros', {
           url: '/ahorros',
@@ -74,6 +80,7 @@ angular.module('coop',['ui.router', 'firebase'])
 
 .controller('crtlHome', function($scope, $rootScope, $state) {
   $rootScope.state = 'home';
+  $rootScope.visible = 'ocultar';
 
   $scope.showAhorroVista = function() {
     $state.go('ahorros');
@@ -94,41 +101,51 @@ angular.module('coop',['ui.router', 'firebase'])
   $scope.showCreditoConsumo = function() {
     $state.go('creditos');
   }
-
-
-
 })
 
-.controller('crtlCuentas', function($scope, $rootScope) {
-  $rootScope.state = 'cuentas';
+.controller('crtlServicios', function($rootScope) {
+  $rootScope.state = 'servicios';
+  $rootScope.namePage = 'Nuestros Servicios';
+  $rootScope.colorBanner = 'azul';
+  var vm = this;
+  vm.templateService = 'templates/ahorros/vista.html';
+  vm.typeService = 'ahorros';
+  vm.service = 'vista';
+  vm.showService = function(typeService, subTypeService) {
+    vm.templateService = 'templates/' + typeService + '/' + subTypeService + '.html';
+    vm.typeService = typeService;
+    vm.service = subTypeService;
+  }
 })
 
-.controller('crtlDepositos', function($scope, $rootScope) {
-  $rootScope.state = 'depositos';
-})
-
-.controller('crtlCreditos', function($scope, $rootScope) {
-  $rootScope.state = 'creditos';
-})
-
-.controller('crtlMicro', function($scope, $rootScope) {
-  $rootScope.state = 'micro';
-})
-
-.controller('crtlQuienesSomos', function($scope, $rootScope) {
+.controller('crtlQuienesSomos', function($rootScope) {
+  console.log('quienes somos');
   $rootScope.state = 'somos';
+  $rootScope.namePage = 'Quienes Somos';
+  $rootScope.colorBanner = 'rojo';
+  $rootScope.visible = 'ocultar';
 })
 
-.controller('crtlSocios', function($scope, $rootScope) {
+.controller('crtlSocios', function($rootScope) {
   $rootScope.state = 'socios';
+  $rootScope.namePage = 'Nuestros Socios';
+  $rootScope.colorBanner = 'morado';
+  $rootScope.visible = 'ocultar';
 })
 
 .controller('crtlComunidad', function($scope, $rootScope) {
   $rootScope.state = 'comunidad';
+  $rootScope.namePage = 'Coopartamos en la comunidad';
+  $rootScope.colorBanner = 'verde';
+  $rootScope.visible = 'mostrar';
+  var vm = this;
+
 })
 
 .controller('crtlContactanos', function($scope, $rootScope) {
   $rootScope.state = 'contactanos';
+  $rootScope.namePage = 'Contáctanos';
+  $rootScope.colorBanner = 'cafe';
 })
 
 .controller('crtlContador', function($scope, $firebase) {

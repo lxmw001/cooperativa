@@ -1,0 +1,62 @@
+  <!-- page-banner-section
+
+      ================================================== -->
+<!-- <section class="page-banner-section">
+  <div class="text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Nuestros Servicios</h2>
+      </div>
+    </div>
+  </div>
+</section>
+ -->
+<!-- End page-banner section -->
+
+<!-- services-page section
+
+    ================================================== -->
+
+<section class="services-page-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="side-navigation">
+          <h2><a ng-class="{active: vm.typeService=='ahorros'}">Ahorros</a></h2>
+          <ul class="side-navigation-list">
+            <li><a ng-class="{active: vm.service=='vista'}" ng-click="vm.showService('ahorros', 'vista')">Ahorro a la Vista</a></li>
+            <li><a ng-class="{active: vm.service=='futuro'}" ng-click="vm.showService('ahorros', 'futuro')">Ahorro Futuro</a></li>
+          </ul>
+          <h2><a ng-class="{active: vm.typeService=='creditos'}">Créditos</a></h2>
+          <ul class="side-navigation-list">
+            <li><a ng-class="{active: vm.service=='consumo'}" ng-click="vm.showService('creditos', 'consumo')">Crédito de Consumo</a></li>
+            <li><a ng-class="{active: vm.service=='micro'}" ng-click="vm.showService('creditos', 'micro')">Microcredito</a></li>
+            <li><a ng-class="{active: vm.service=='comunal'}" ng-click="vm.showService('creditos', 'comunal')">Bancas Comunales </a></li>
+          </ul>
+          <h2><a ng-class="{active: vm.typeService=='inversiones'}">Inversiones</a></h2>
+          <ul class="side-navigation-list">
+            <li><a ng-class="{active: vm.service=='consumo'}" ng-click="vm.showService('inversiones', 'consumo')">Crédito de Consumo</a></li>
+            <li><a ng-class="{active: vm.service=='micro'}" ng-click="vm.showService('inversiones', 'micro')">Microcredito</a></li>
+            <li><a ng-class="{active: vm.service=='comunal'}" ng-click="vm.showService('inversiones', 'comunal')">Bancas Comunales </a></li>
+          </ul>
+          <div class="contact-info">
+            <h2>Información del contacto</h2>
+            <ul class="information-list">
+              <li><i class="icon icon-Pointer"></i><span>A 41, Pandav Nagar Complex, New Delhi</span></li>
+              <li><i class="icon icon-Phone2"></i><span>+1 612-4000-5000</span><span>+1 612-4500-4500</span></li>
+              <li><i class="icon icon-Mail"></i><a href="#">fiannce-info0@finance.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-9 white-right">
+        <div class="services-wrapp">
+          <div ng-include="vm.templateService"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End services-page section -->

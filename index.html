@@ -8,7 +8,7 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="favicon.ico">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" type="text/css" href="css/stroke-gap.css" media="screen">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" media="screen">
@@ -97,17 +97,18 @@
 
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-              <a class="navbar-brand" ui-sref="home"><img src="img/logo.png" alt="" width="200px"></a> </div>
+              <a class="navbar-brand" ui-sref="home"><img src="img/logo.png" alt="" width="218px" height="50px"></a> </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
-                <li ng-class="{active: state=='home'}"><a ui-sref="home"><span>Home</span></a></li>
-                <li ng-class="{active: state=='somos'}"><a ui-sref="quienes_somos"><span>¿Quienes Somos?</span></a></li>
-                <li ng-class="{active: state=='socios'}"><a ui-sref="socios" class="dropbtn"><span>Socios</span></a></li>
-                <li ng-class="{active: state=='comunidad'}"><a ui-sref="comunidad" class="dropbtn"><span>Comunidad</span></a></li>
-                <li ng-class="{active: state=='contactanos'}"><a ui-sref="contactanos" class="dropbtn"><span>Contáctanos</span></a></li>
+                <li><a ng-class="{active: state=='home'}" ui-sref="home"><span>Home</span></a></li>
+                <li><a ng-class="{active: state=='somos'}" ui-sref="quienes_somos"><span>¿Quienes Somos?</span></a></li>
+                <li><a ng-class="{active: state=='servicios'}" ui-sref="servicios"><span>Servicios</span></a></li>
+                <li><a ng-class="{active: state=='socios'}" ui-sref="socios" class="dropbtn"><span>Socios</span></a></li>
+                <li><a ng-class="{active: state=='comunidad'}" ui-sref="comunidad" class="dropbtn"><span>Comunidad</span></a></li>
+                <li><a ng-class="{active: state=='contactanos'}" ui-sref="contactanos" class="dropbtn"><span>Contáctanos</span></a></li>
               </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -118,319 +119,482 @@
         </nav>
       </header>
       <!-- load headers for every page -->
-        <section id="home-section" class="slider1" ng-show="state=='home'">
+      <section id="home-section" class="slider1" ng-show="state=='home'">
 
-          <!--
+        <!--
 
-            #################################
+          #################################
 
-              - deepak BANNER -
+            - deepak BANNER -
 
-            #################################
+          #################################
 
-            -->
+          -->
 
-          <div class="tp-banner-container">
-            <div class="tp-banner" >
-              <ul>
+        <div class="tp-banner-container">
+          <div class="tp-banner" >
+            <ul>
 
-                <!-- SLIDE  -->
+              <!-- SLIDE  -->
 
-                <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on"  data-title="Intro Slide">
+              <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on"  data-title="Intro Slide">
 
-                  <!-- MAIN IMAGE -->
+                <!-- MAIN IMAGE -->
 
-                  <img src="images/dummy.png"  alt="2" data-lazyload="upload/slide/1.jpg" data-bgposition="right top" data-kenburns="on" data-duration="12000" data-ease="Power0.easeInOut" data-bgfit="115" data-bgfitend="100" data-bgpositionend="center bottom">
+                <img src="images/dummy.png"  alt="2" data-lazyload="upload/slide/1.jpg" data-bgposition="right top" data-kenburns="on" data-duration="12000" data-ease="Power0.easeInOut" data-bgfit="115" data-bgfitend="100" data-bgpositionend="center bottom">
 
-                  <!-- <img src="upload/slide/1.jpg"  alt="slidebg1" data-lazyload="upload/slide/1.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> -->
+                <!-- <img src="upload/slide/1.jpg"  alt="slidebg1" data-lazyload="upload/slide/1.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> -->
 
-                  <!-- LAYERS -->
+                <!-- LAYERS -->
 
-                  <!-- LAYER NR. 1 -->
+                <!-- LAYER NR. 1 -->
 
-                  <div class="tp-caption finewide_medium_white lfl tp-resizeme rs-parallaxlevel-0"
+                <div class="tp-caption finewide_medium_white lfl tp-resizeme rs-parallaxlevel-0"
 
-                      data-x="620"
+                    data-x="620"
 
-                      data-y="230"
+                    data-y="230"
 
-                      data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                    data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
 
-                      data-speed="500"
+                    data-speed="500"
 
-                      data-start="1200"
+                    data-start="1200"
 
-                      data-easing="Power3.easeInOut"
+                    data-easing="Power3.easeInOut"
 
-                      data-splitin="none"
+                    data-splitin="none"
 
-                      data-splitout="none"
+                    data-splitout="none"
 
-                      data-elementdelay="0.1"
+                    data-elementdelay="0.1"
 
-                      data-endelementdelay="0.1"
+                    data-endelementdelay="0.1"
 
-                      style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;">finance SERVICE<br>
-                    <span>PROVIDERS</span> <br>
-                  </div>
+                    style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;">finance SERVICE<br>
+                  <span>PROVIDERS</span> <br>
+                </div>
 
-                  <!-- LAYER NR. 2 -->
+                <!-- LAYER NR. 2 -->
 
-                  <div class="tp-caption small_text customin tp-resizeme rs-parallaxlevel-0"
+                <div class="tp-caption small_text customin tp-resizeme rs-parallaxlevel-0"
 
-                      data-x="620"
+                    data-x="620"
 
-                      data-y="350"
+                    data-y="350"
 
-                      data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                    data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
 
-                      data-speed="500"
+                    data-speed="500"
 
-                      data-start="1800"
+                    data-start="1800"
 
-                      data-easing="Power3.easeInOut"
+                    data-easing="Power3.easeInOut"
 
-                      data-splitin="none"
+                    data-splitin="none"
 
-                      data-splitout="none"
+                    data-splitout="none"
 
-                      data-elementdelay="0.05"
+                    data-elementdelay="0.05"
 
-                      data-endelementdelay="0.1"
+                    data-endelementdelay="0.1"
 
-                      style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">Lorem ipsum dolor sit amet, consectetur <br>
-                    adipisicing elit, sed do eiusmod tempor incididunt ut<br>
-                    labore et dolore magna aliqua. Ut enim ad minim veniam. </div>
+                    style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">Lorem ipsum dolor sit amet, consectetur <br>
+                  adipisicing elit, sed do eiusmod tempor incididunt ut<br>
+                  labore et dolore magna aliqua. Ut enim ad minim veniam. </div>
 
-                  <!-- LAYER NR. 3 -->
+                <!-- LAYER NR. 3 -->
 
-                  <div class="tp-caption lfl tp-resizeme rs-parallaxlevel-0"
+                <div class="tp-caption lfl tp-resizeme rs-parallaxlevel-0"
 
-                      data-x="620"
+                    data-x="620"
 
-                      data-y="470"
+                    data-y="470"
 
-                      data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                    data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
 
-                      data-speed="500"
+                    data-speed="500"
 
-                      data-start="2400"
+                    data-start="2400"
 
-                      data-easing="Power3.easeInOut"
+                    data-easing="Power3.easeInOut"
 
-                      data-splitin="none"
+                    data-splitin="none"
 
-                      data-splitout="none"
+                    data-splitout="none"
 
-                      data-elementdelay="0.1"
+                    data-elementdelay="0.1"
 
-                      data-endelementdelay="0.1"
+                    data-endelementdelay="0.1"
 
-                      data-linktoslide="next"
+                    data-linktoslide="next"
 
-                      style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='trans-btn'>load more</a> </div>
+                    style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='trans-btn'>load more</a> </div>
 
-                  <!-- LAYER NR. 4 -->
+                <!-- LAYER NR. 4 -->
 
-                  <div class="tp-caption lfr tp-resizeme rs-parallaxlevel-0"
+                <div class="tp-caption lfr tp-resizeme rs-parallaxlevel-0"
 
-                      data-x="840"
+                    data-x="840"
 
-                      data-y="470"
+                    data-y="470"
 
-                      data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                    data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
 
-                      data-speed="500"
+                    data-speed="500"
 
-                      data-start="2500"
+                    data-start="2500"
 
-                      data-easing="Power3.easeInOut"
+                    data-easing="Power3.easeInOut"
 
-                      data-splitin="none"
+                    data-splitin="none"
 
-                      data-splitout="none"
+                    data-splitout="none"
 
-                      data-elementdelay="0.1"
+                    data-elementdelay="0.1"
 
-                      data-endelementdelay="0.1"
+                    data-endelementdelay="0.1"
 
-                      data-linktoslide="next"
+                    data-linktoslide="next"
 
-                      style="z-index: 11; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='trans-btn2'>Portfolio</a> </div>
+                    style="z-index: 11; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='trans-btn2'>Portfolio</a> </div>
 
-                  <!-- LAYER NR. 4 -->
+                <!-- LAYER NR. 4 -->
 
-                  <div class="tp-caption finewide_medium_white lfl tp-resizeme rs-parallaxlevel-0"
+                <div class="tp-caption finewide_medium_white lfl tp-resizeme rs-parallaxlevel-0"
 
-                      data-x="0"
+                    data-x="0"
 
-                      data-y="0"
+                    data-y="0"
 
-                      data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                    data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
 
-                      data-speed="700"
+                    data-speed="700"
 
-                      data-start="1200"
+                    data-start="1200"
 
-                      data-easing="Power3.easeInOut"
+                    data-easing="Power3.easeInOut"
 
-                      data-splitin="none"
+                    data-splitin="none"
 
-                      data-splitout="none"
+                    data-splitout="none"
 
-                      data-elementdelay="0.1"
+                    data-elementdelay="0.1"
 
-                      data-endelementdelay="0.1"
+                    data-endelementdelay="0.1"
 
-                      style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;"><img src="upload/slide/slide2-img.png" alt=""> </div>
-                </li>
+                    style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;"><img src="upload/slide/slide2-img.png" alt=""> </div>
+              </li>
 
-                <!-- SLIDE  -->
+              <!-- SLIDE  -->
 
-                <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on"  data-title="Ken Burns Slide">
+              <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on"  data-title="Ken Burns Slide">
 
-                  <!-- MAIN IMAGE -->
+                <!-- MAIN IMAGE -->
 
-                  <img src="images/dummy.png"  alt="2" data-lazyload="upload/slide/1.jpg" data-bgposition="right top" data-kenburns="on" data-duration="12000" data-ease="Power0.easeInOut" data-bgfit="115" data-bgfitend="100" data-bgpositionend="center bottom">
+                <img src="images/dummy.png"  alt="2" data-lazyload="upload/slide/1.jpg" data-bgposition="right top" data-kenburns="on" data-duration="12000" data-ease="Power0.easeInOut" data-bgfit="115" data-bgfitend="100" data-bgpositionend="center bottom">
 
-                  <!-- LAYERS -->
+                <!-- LAYERS -->
 
-                  <!-- LAYER NR. 1 -->
+                <!-- LAYER NR. 1 -->
 
-                  <div class="tp-caption small_text customin tp-resizeme rs-parallaxlevel-0"
+                <div class="tp-caption small_text customin tp-resizeme rs-parallaxlevel-0"
 
-                      data-x="430"
+                    data-x="430"
 
-                      data-y="310"
+                    data-y="310"
 
-                      data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                    data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
 
-                      data-speed="500"
+                    data-speed="500"
 
-                      data-start="1200"
+                    data-start="1200"
 
-                      data-easing="Power3.easeInOut"
+                    data-easing="Power3.easeInOut"
 
-                      data-splitin="none"
+                    data-splitin="none"
 
-                      data-splitout="none"
+                    data-splitout="none"
 
-                      data-elementdelay="0.05"
+                    data-elementdelay="0.05"
 
-                      data-endelementdelay="0.1"
+                    data-endelementdelay="0.1"
 
-                      style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">We are experience company </div>
+                    style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">We are experience company </div>
 
-                  <!-- LAYER NR. 2 -->
+                <!-- LAYER NR. 2 -->
 
-                  <div class="tp-caption finewide_medium_white lfl tp-resizeme rs-parallaxlevel-0"
+                <div class="tp-caption finewide_medium_white lfl tp-resizeme rs-parallaxlevel-0"
 
-                      data-x="310"
+                    data-x="310"
 
-                      data-y="358"
+                    data-y="358"
 
-                      data-speed="500"
+                    data-speed="500"
 
-                      data-start="1800"
+                    data-start="1800"
 
-                      data-easing="Power3.easeInOut"
+                    data-easing="Power3.easeInOut"
 
-                      data-splitin="none"
+                    data-splitin="none"
 
-                      data-splitout="none"
+                    data-splitout="none"
 
-                      data-elementdelay="0.05"
+                    data-elementdelay="0.05"
 
-                      data-endelementdelay="0.05"
+                    data-endelementdelay="0.05"
 
-                      style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">finance SERVICES </div>
+                    style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">finance SERVICES </div>
 
-                  <!-- LAYER NR. 3 -->
+                <!-- LAYER NR. 3 -->
 
-                  <div class="tp-caption finewide_medium_white lfr tp-resizeme rs-parallaxlevel-0"
+                <div class="tp-caption finewide_medium_white lfr tp-resizeme rs-parallaxlevel-0"
 
-                      data-x="185"
+                    data-x="185"
 
-                      data-y="412"
+                    data-y="412"
 
-                      data-speed="500"
+                    data-speed="500"
 
-                      data-start="1800"
+                    data-start="1800"
 
-                      data-easing="Power3.easeInOut"
+                    data-easing="Power3.easeInOut"
 
-                      data-splitin="none"
+                    data-splitin="none"
 
-                      data-splitout="none"
+                    data-splitout="none"
 
-                      data-elementdelay="0.1"
+                    data-elementdelay="0.1"
 
-                      data-endelementdelay="0.1"
+                    data-endelementdelay="0.1"
 
-                      style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><span>Creative &amp; Professional </span> </div>
+                    style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><span>Creative &amp; Professional </span> </div>
 
-                  <!-- LAYER NR. 4 -->
+                <!-- LAYER NR. 4 -->
 
-                  <div class="tp-caption lfb tp-resizeme rs-parallaxlevel-0"
+                <div class="tp-caption lfb tp-resizeme rs-parallaxlevel-0"
 
-                      data-x="470"
+                    data-x="470"
 
-                      data-y="505"
+                    data-y="505"
 
-                      data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                    data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
 
-                      data-speed="500"
+                    data-speed="500"
 
-                      data-start="2400"
+                    data-start="2400"
 
-                      data-easing="Power3.easeInOut"
+                    data-easing="Power3.easeInOut"
 
-                      data-splitin="none"
+                    data-splitin="none"
 
-                      data-splitout="none"
+                    data-splitout="none"
 
-                      data-elementdelay="0.1"
+                    data-elementdelay="0.1"
 
-                      data-endelementdelay="0.1"
+                    data-endelementdelay="0.1"
 
-                      data-linktoslide="next"
+                    data-linktoslide="next"
 
-                      style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='trans-btn'>View Projects</a> </div>
-                </li>
+                    style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='trans-btn'>View Projects</a> </div>
+              </li>
 
-                <!-- SLIDE  -->
+              <!-- SLIDE  -->
 
-              </ul>
-              <div class="tp-bannertimer"></div>
+            </ul>
+            <div class="tp-bannertimer"></div>
+          </div>
+        </div>
+        <div class="float_right address request-quote">
+          <div class="top-info">
+            <div class="icon-box"> <span class=" icon icon-Pointer"></span> </div>
+            <div class="content-box">
+              <p> 13005 Greenville Avenue <br>
+                <span>California, TX 70240</span></p>
             </div>
           </div>
-          <div class="float_right address request-quote">
-            <div class="top-info">
-              <div class="icon-box"> <span class=" icon icon-Pointer"></span> </div>
-              <div class="content-box">
-                <p> 13005 Greenville Avenue <br>
-                  <span>California, TX 70240</span></p>
-              </div>
-            </div>
-            <div class="top-info">
-              <div class="icon-box"> <span class="separator icon icon-Phone2"></span> </div>
-              <div class="content-box">
-                <p>+ (1800) 456 7890 <br>
-                  <span>info@.finance.com</span></p>
-              </div>
-            </div>
-            <div class="top-info">
-              <div class="icon-box"> <span class="separator icon icon-Timer"></span> </div>
-              <div class="content-box">
-                <p>Mon - Sat 9.00 - 19.00 <br>
-                  <span>Sunday Closed</span></p>
-              </div>
+          <div class="top-info">
+            <div class="icon-box"> <span class="separator icon icon-Phone2"></span> </div>
+            <div class="content-box">
+              <p>+ (1800) 456 7890 <br>
+                <span>info@.finance.com</span></p>
             </div>
           </div>
-        </section>
+          <div class="top-info">
+            <div class="icon-box"> <span class="separator icon icon-Timer"></span> </div>
+            <div class="content-box">
+              <p>Mon - Sat 9.00 - 19.00 <br>
+                <span>Sunday Closed</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section class="page-banner-section {{colorBanner}}" ng-show="state!='home'">
+        <div class="text-center">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>{{namePage}}</h2>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+
     <div ui-view></div>
+    <div ng-include="'templates/aux_comunidad.html'" ng-if="state=='home'"></div>
+
+    <!-- Galeria de Comunidad solo aqui funciona -->
+  <!--   <section class="projects-page-section">
+      <div class="container">
+        <div class="project-title title"> <span class="sm-title">Coopartamos en la</span>
+          <h2 class="box-header">COMUNIDAD</h2>
+          <p>Aquí podremos ver imágenes de nuestra labor en la comunidad, eventos sociales, deportivos y
+            culturales en donde Coopartamos se encuentra presente.</p>
+        </div>
+      </div>
+      <div class="gallery">
+        <div class="container">
+          <div class="project-box iso-call col2">
+            <div class="project-post transport heavy"> <img src="img/foto1.jpg" alt="">
+              <div class="hover-box">
+                <ul class="list-unstyled">
+                  <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                </ul>
+                <div class="hover-box">
+                  <ul class="list-unstyled">
+                    <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                  </ul>
+                  <div class="bx">
+                    <h2><a href="single-project.html">finance Works</a></h2>
+                    <span>Duis aute irure dolor in reprehenderit in voluptate velit esse</span> </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-post freight"> <img src="img/foto2.JPG" alt="">
+              <div class="hover-box">
+                <ul class="list-unstyled">
+                  <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                </ul>
+                <div class="hover-box">
+                  <ul class="list-unstyled">
+                    <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                  </ul>
+                  <div class="bx">
+                    <h2><a href="single-project.html">finance Works</a></h2>
+                    <span>Duis aute irure dolor in reprehenderit in voluptate velit esse</span> </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-post transport heavy"> <img src="img/foto3.JPG" alt="">
+              <div class="hover-box">
+                <ul class="list-unstyled">
+                  <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                </ul>
+                <div class="hover-box">
+                  <ul class="list-unstyled">
+                    <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                  </ul>
+                  <div class="bx">
+                    <h2><a href="single-project.html">finance Works</a></h2>
+                    <span>Duis aute irure dolor in reprehenderit in voluptate velit esse</span> </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-post transport"> <img src="img/foto4.JPG" alt="">
+              <div class="hover-box">
+                <ul class="list-unstyled">
+                  <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                </ul>
+                <div class="hover-box">
+                  <ul class="list-unstyled">
+                    <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                  </ul>
+                  <div class="bx">
+                    <h2><a href="single-project.html">finance Works</a></h2>
+                    <span>Duis aute irure dolor in reprehenderit in voluptate velit esse</span> </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-post freight heavy"> <img src="img/foto5.jpg" alt="">
+              <div class="hover-box">
+                <ul class="list-unstyled">
+                  <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                </ul>
+                <div class="hover-box">
+                  <ul class="list-unstyled">
+                    <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                  </ul>
+                  <div class="bx">
+                    <h2><a href="single-project.html">finance Works</a></h2>
+                    <span>Duis aute irure dolor in reprehenderit in voluptate velit esse</span> </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-post fleet"> <img src="img/slider1.JPG" alt="">
+              <div class="hover-box">
+                <ul class="list-unstyled">
+                  <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                </ul>
+                <div class="hover-box">
+                  <ul class="list-unstyled">
+                    <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                  </ul>
+                  <div class="bx">
+                    <h2><a href="single-project.html">finance Works</a></h2>
+                    <span>Duis aute irure dolor in reprehenderit in voluptate velit esse</span> </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-post transport"> <img src="img/foto22.jpg" alt="">
+              <div class="hover-box">
+                <ul class="list-unstyled">
+                  <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                </ul>
+                <div class="hover-box">
+                  <ul class="list-unstyled">
+                    <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                  </ul>
+                  <div class="bx">
+                    <h2><a href="single-project.html">finance Works</a></h2>
+                    <span>Duis aute irure dolor in reprehenderit in voluptate velit esse</span> </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-post heavy"> <img src="img/slider3.png" alt="">
+              <div class="hover-box">
+                <ul class="list-unstyled">
+                  <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                </ul>
+                <div class="hover-box">
+                  <ul class="list-unstyled">
+                    <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                  </ul>
+                  <div class="bx">
+                    <h2><a href="single-project.html">finance Works</a></h2>
+                    <span>Duis aute irure dolor in reprehenderit in voluptate velit esse</span> </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-post fleet"> <img src="img/foto4.JPG" alt="">
+              <div class="hover-box">
+                <ul class="list-unstyled">
+                  <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                </ul>
+                <div class="hover-box">
+                  <ul class="list-unstyled">
+                    <li><a href="single-project.html"><i class="icon icon-Linked"></i></a></li>
+                  </ul>
+                  <div class="bx">
+                    <h2><a href="single-project.html">finance Works</a></h2>
+                    <span>Duis aute irure dolor in reprehenderit in voluptate velit esse</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section> -->
+
 
   <!--
     <header class="header-fixed">
