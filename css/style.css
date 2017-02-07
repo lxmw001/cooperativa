@@ -4945,3 +4945,18 @@ footer .copyright p{
 /*#map {
   width: 100% !important;
 }*/
+
+/*.fix{width:100%; padding:0px;}*/
+
+div.desc{
+    position: absolute;
+    bottom: 0;
+    background-color: #000;
+    color: #fff;
+    opacity: 0.5;
+    left:0;   /** new  **/
+    right:0;  /** new  **/
+    filter: alpha(opacity=50);
+}
+
+.fix{ width: 100%; padding: 0px; position: relative; }
