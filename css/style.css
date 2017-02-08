@@ -3379,6 +3379,8 @@ padding: 10px 22px;
 }
 #contact-form input[type="text"],
 .comment-form input[type="text"],
+#contact-form input[type="number"],
+.comment-form input[type="number"],
 #contact-form textarea,
 .comment-form textarea {
   width: 100%;
@@ -3420,8 +3422,28 @@ padding: 10px 22px;
 	padding: 0px 27px;
 	border: none;
 }
+#contact-form input[type="reset"],
+.comment-form input[type="reset"] {
+    font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  background: #FF84E2;
+  position: relative;
+  line-height: 40px;
+  border-radius: 3px;
+  margin-bottom: 27px;
+  font-size: 14px;
+  margin-top: 40px;
+  padding: 0px 27px;
+  border: none;
+}
 #contact-form input[type="submit"]:hover,
 .comment-form input[type="submit"]:hover {
+  opacity: 0.7;
+}
+#contact-form input[type="reset"]:hover,
+.comment-form input[type="reset"]:hover {
   opacity: 0.7;
 }
 #contact-form .message,
@@ -4959,4 +4981,16 @@ div.desc{
     filter: alpha(opacity=50);
 }
 
+.desc h4 {
+  font-weight: 600;
+}
+
+.desc p {
+  color: #fff;
+}
+
 .fix{ width: 100%; padding: 0px; position: relative; }
+
+.sim {
+  padding: 0 !important;
+}

@@ -1,7 +1,7 @@
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('select').material_select();
-  });
+  // $(document).ready(function() {
+  //   $('select').material_select();
+  // });
 </script>
 
 <div class="container">
@@ -10,8 +10,38 @@
 
 <div class="container">
 
-   <div class="row">
-    <form class="col s12">
+  <div class="row">
+    <div class="col-md-6 offset-col-md-6">
+      <form id="contact-form">
+        <div class="row">
+          <div class="fancy-select col-md-12">
+            <select class="form-control custom-form custom-select fancified">
+              <option selected="selected">Tipo de Credito</option>
+              <option>Meet Finance Assistant - PR Agency </option>
+              <option>Discussions with Senior Finance Manager</option>
+              <option>Designer</option>
+              <option>Our CEO Finanace Theme Group</option>
+            </select>
+          </div>
+          <div class="col-md-12">
+            <input name="monto" id="monto" type="number" placeholder="Monto a Solicitar" ng-model="monto">
+          </div>
+          <div class="col-md-12">
+            <input name="plazo" id="plazo" type="number" placeholder="Plazo en meses" ng-model="plazo">
+          </div>
+          <div class="fancy-select col-md-12">
+            <select class="form-control custom-form custom-select fancified">
+              <option value="0" selected="selected">Tipo de amortización</option>
+              <option value="1">Cuota fija (Francesa)</option>
+              <option value="2">Capital fijo (Alemana)</option>
+            </select>
+          </div>
+        </div>
+        <input type="reset" id="submit_contact" value="Limpiar">
+        <input type="submit" id="submit_contact" value="Calcular" ng-click="calcular()">
+      </form>
+    </div>
+  <!--   <form class="col-md-6">
       <div class="row">
         <div class="input-field col s12">
           <select>
@@ -54,7 +84,7 @@
           </button>
         </div>
       </div>
-    </form>
+    </form> -->
   </div>
 </div>
 
