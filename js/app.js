@@ -307,20 +307,28 @@ angular.module('coop',['ui.router', 'firebase'])
   }
 })
 
-.controller('crtlSimulador', function($scope, $firebase, $firebaseAuth) {
+.controller('crtlSimulador', function($scope) {
 
 	$scope.calcular = function() {
 		$scope.letras = new Array();
-		var interes = 11;
+		var interes = 0.02;
+    var expireDate = new Date();
+    // formula
+    // interes * prestamo-solicitado / 1 - (1 + interes)^(-plazo_meses)
+    var cuota = (interes * $scope.monto) / (1 - Math.pow(1 + interes, -$scope.plazo));
+    var total = cuota * $scope.plazo;
+    var saldo = total;
 
 		for(i=1; i <= $scope.plazo; i++) {
 			var letra = {};
 			letra.numero = i;
-			letra.vencimiento = "10/09/2018";
-			letra.saldoCapital = $scope.monto;
-			letra.capital = $scope.monto;
-			letra.cuota = $scope.monto / $scope.plazo;
-			letra.interes = 11.57;
+			letra.vencimiento = expireDate;
+      expireDate = new Date(expireDate.setMonth(expireDate.getMonth() + 1))
+      saldo -= cuota;
+			letra.saldoCapital = saldo;
+			letra.capital = total;
+			letra.cuota = cuota;
+			letra.interes = (interes * 100) + '%';
 			letra.otros = 19.00;
 			$scope.letras.push(letra);
 		}

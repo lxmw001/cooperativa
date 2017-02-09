@@ -4994,3 +4994,8 @@ div.desc{
 .sim {
   padding: 0 !important;
 }
+
+/*alinaer los titulos y contenido de la tabla*/
+table th, table tr {
+  text-align: center;
+}
