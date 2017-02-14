@@ -1,0 +1,21 @@
+{
+  "name": "Coopartamos_Web",
+  "namelower": "coopartamos",
+  "version": "0.0.1",
+  "description": "An example AngularJS project",
+  "readme": "README.md",
+  "author": "Luis Gonzalez",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@git.example.com:example.git"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "dependencies": {
+    "express": "^4.14.1",
+    "gzippo": "^0.2.0"
+  }
+}
