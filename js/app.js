@@ -78,39 +78,44 @@ angular.module('coop',['ui.router', 'firebase'])
 
 })
 
-.controller('crtlHome', function($scope, $rootScope, $state) {
+.controller('crtlHome', function($scope, $rootScope, $state,  $anchorScroll) {
+  $anchorScroll();
   $rootScope.state = 'home';
   $rootScope.visible = 'ocultar';
 
-  $scope.showAhorroVista = function() {
-    $state.go('ahorros');
+  $scope.goAhorros = function() {
+    $state.go('servicios');
   }
 
-  $scope.showAhorroFuturo = function() {
-    // $state.go('');
+  $scope.goCreditos = function() {
+    $state.go('servicios');
+    $rootScope.typeService = 'creditos';
+    $rootScope.subTypeService = 'consumo';
   }
 
-  $scope.showDepositoPlazoFijo = function() {
-    $state.go('plazo_fijo');
-  }
-
-  $scope.showMicroCredito = function() {
-    $state.go('micro_creditos');
-  }
-
-  $scope.showCreditoConsumo = function() {
-    $state.go('creditos');
+  $scope.goInversiones = function() {
+    $state.go('servicios');
+    $rootScope.typeService = 'inversiones';
+    $rootScope.subTypeService = 'consumo';
   }
 })
 
-.controller('crtlServicios', function($rootScope) {
+.controller('crtlServicios', function($rootScope,  $anchorScroll) {
+  $anchorScroll();
   $rootScope.state = 'servicios';
   $rootScope.namePage = 'Nuestros Servicios';
   $rootScope.colorBanner = 'azul';
   var vm = this;
-  vm.templateService = 'templates/ahorros/vista.html';
-  vm.typeService = 'ahorros';
-  vm.service = 'vista';
+
+  vm.defaultService = function() {
+    vm.typeService = $rootScope.typeService || 'ahorros';
+    vm.service = $rootScope.subTypeService || 'vista';
+    vm.templateService = 'templates/' + vm.typeService + '/' + vm.service + '.html';
+    $rootScope.typeService = '';
+    $rootScope.subTypeService = '';
+  }
+
+
   vm.showService = function(typeService, subTypeService) {
     vm.templateService = 'templates/' + typeService + '/' + subTypeService + '.html';
     vm.typeService = typeService;
@@ -118,22 +123,24 @@ angular.module('coop',['ui.router', 'firebase'])
   }
 })
 
-.controller('crtlQuienesSomos', function($rootScope) {
-  console.log('quienes somos');
+.controller('crtlQuienesSomos', function($rootScope, $anchorScroll) {
+  $anchorScroll();
   $rootScope.state = 'somos';
   $rootScope.namePage = 'Quienes Somos';
   $rootScope.colorBanner = 'rojo';
   $rootScope.visible = 'ocultar';
 })
 
-.controller('crtlSocios', function($rootScope) {
+.controller('crtlSocios', function($rootScope, $anchorScroll) {
+  $anchorScroll();
   $rootScope.state = 'socios';
   $rootScope.namePage = 'Nuestros Socios';
   $rootScope.colorBanner = 'morado';
   $rootScope.visible = 'ocultar';
 })
 
-.controller('crtlComunidad', function($scope, $rootScope) {
+.controller('crtlComunidad', function($scope, $rootScope, $anchorScroll) {
+  $anchorScroll();
   $rootScope.state = 'comunidad';
   $rootScope.namePage = 'Coopartamos en la comunidad';
   $rootScope.colorBanner = 'verde';
@@ -142,13 +149,15 @@ angular.module('coop',['ui.router', 'firebase'])
 
 })
 
-.controller('crtlContactanos', function($scope, $rootScope) {
+.controller('crtlContactanos', function($scope, $rootScope, $anchorScroll) {
+  $anchorScroll();
   $rootScope.state = 'contactanos';
   $rootScope.namePage = 'Contáctanos';
   $rootScope.colorBanner = 'cafe';
 })
 
-.controller('crtlContador', function($scope, $firebase) {
+.controller('crtlContador', function($scope, $firebase, $anchorScroll) {
+  $anchorScroll();
 
   contador = function(opcion) {
     $.ajax({

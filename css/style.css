@@ -4999,3 +4999,7 @@ div.desc{
 table th, table tr {
   text-align: center;
 }
+
+.pointer {
+  cursor: pointer;
+}
